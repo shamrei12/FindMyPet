@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BulletinCollectionViewCell" id="gTV-IL-0wX" customClass="BulletinCollectionViewCell" customModule="FindMyPets" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccy-6G-hj3">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cry-FG-A7P">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GDW-33-qVq">
+                                        <rect key="frame" x="0.0" y="2" width="100" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Dbg-WI-vAN"/>
+                                            <constraint firstAttribute="width" constant="100" id="Q4Q-tJ-zG8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="slg-Rm-kda">
+                                        <rect key="frame" x="100" y="0.0" width="200" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропала собака по кличке &quot;Семен&quot;" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2W-jw-6BG">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="39.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропала собака в районе ул. Ленинская магазин &quot;Копеечка&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEt-f4-ZTI">
+                                                <rect key="frame" x="0.0" y="49.333333333333336" width="200" height="21.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cry-FG-A7P" secondAttribute="bottom" id="9MB-1f-MVI"/>
+                            <constraint firstItem="cry-FG-A7P" firstAttribute="leading" secondItem="Ccy-6G-hj3" secondAttribute="leading" id="RdK-6H-CtI"/>
+                            <constraint firstItem="cry-FG-A7P" firstAttribute="top" secondItem="Ccy-6G-hj3" secondAttribute="top" id="frv-P5-TEy"/>
+                            <constraint firstAttribute="trailing" secondItem="cry-FG-A7P" secondAttribute="trailing" id="o0b-oa-2pb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ccy-6G-hj3" secondAttribute="trailing" id="dWd-xk-pdm"/>
+                <constraint firstAttribute="bottom" secondItem="Ccy-6G-hj3" secondAttribute="bottom" id="fp9-4x-HVD"/>
+                <constraint firstItem="Ccy-6G-hj3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jA1-tU-oZq"/>
+                <constraint firstItem="Ccy-6G-hj3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jfH-8x-NnO"/>
+            </constraints>
+            <size key="customSize" width="252" height="159"/>
+            <connections>
+                <outlet property="advertName" destination="N2W-jw-6BG" id="f48-ma-RV7"/>
+                <outlet property="imagePet" destination="GDW-33-qVq" id="uGT-wl-gds"/>
+                <outlet property="informationText" destination="iEt-f4-ZTI" id="qDc-oL-4jD"/>
+            </connections>
+            <point key="canvasLocation" x="271.75572519083971" y="58.098591549295776"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tray.fill" catalog="system" width="128" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

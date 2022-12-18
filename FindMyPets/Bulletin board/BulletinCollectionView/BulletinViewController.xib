@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BulletinViewController" customModule="FindMyPets" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="VBQ-iu-0iA" customClass="BulletinViewController" customModule="FindMyPets" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="aet-xj-q9R">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-JE-aTc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jlK-xF-FsK">
+                            <size key="itemSize" width="390" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="VBQ-iu-0iA" id="T8V-1j-qwQ"/>
+                            <outlet property="delegate" destination="VBQ-iu-0iA" id="iSI-Zv-4vU"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="vEm-yf-fR5"/>
+                <constraints>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="bottom" secondItem="vEm-yf-fR5" secondAttribute="bottom" id="5B7-pV-K1i"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="IV3-EN-8VE"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="eha-I6-UO0"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="top" secondItem="vEm-yf-fR5" secondAttribute="top" id="xxy-rC-yGM"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="collectionView" destination="aNP-JE-aTc" id="kse-Cl-yc3"/>
+            </connections>
+            <point key="canvasLocation" x="-190.07633587786259" y="5.6338028169014089"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
