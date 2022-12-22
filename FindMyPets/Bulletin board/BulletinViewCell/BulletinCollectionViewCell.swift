@@ -12,9 +12,9 @@ class BulletinCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imagePet: UIImageView!
     @IBOutlet weak var advertName: UILabel!
     @IBOutlet weak var informationText: UILabel!
+    var cell: BulletinCollectionViewCell!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }
