@@ -15,7 +15,6 @@ class BulletinViewController: UIViewController {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
     }
-
 }
 
 extension BulletinViewController: UICollectionViewDelegate {
@@ -40,6 +39,12 @@ extension BulletinViewController: UICollectionViewDataSource {
     private func configure(cell: BulletinCollectionViewCell, for indexPath: IndexPath) -> UICollectionViewCell {
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let advetPage = AdvertViewController.instantiate()
+        advetPage.modalPresentationStyle = .fullScreen
+        present(advetPage, animated: true)
+    }
+    
 }
     
     
