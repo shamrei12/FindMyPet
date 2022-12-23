@@ -7,13 +7,22 @@
 
 import UIKit
 
+protocol  BulletinViewControllerDeleagete {
+     func toogleMenu()
+}
+
 class BulletinViewController: UIViewController {
+    var delegate: BulletinViewControllerDeleagete?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
+    }
+    
+    @IBAction func menuTapped(_ sender: UIBarButtonItem) {
+        delegate?.toogleMenu()
     }
 }
 

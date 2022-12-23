@@ -14,8 +14,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
+                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-Ba-TGE">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <items>
+                            <navigationItem style="editor" id="JlD-Zg-LRq">
+                                <barButtonItem key="leftBarButtonItem" title="Item" image="menubar.rectangle" catalog="system" id="f68-Tx-nUh">
+                                    <connections>
+                                        <action selector="menuTapped:" destination="VBQ-iu-0iA" id="R9D-2r-hnx"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qpM-xd-9Aa">
+                        <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="VBQ-iu-0iA" id="VNA-ht-BrJ"/>
+                        </connections>
+                    </searchBar>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-JE-aTc">
-                        <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                        <rect key="frame" x="0.0" y="159" width="393" height="659"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="jlK-xF-FsK">
                             <size key="itemSize" width="390" height="100"/>
@@ -32,10 +51,16 @@
                 <viewLayoutGuide key="safeArea" id="vEm-yf-fR5"/>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="bottom" secondItem="vEm-yf-fR5" secondAttribute="bottom" id="5B7-pV-K1i"/>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="IV3-EN-8VE"/>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="eha-I6-UO0"/>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="top" secondItem="vEm-yf-fR5" secondAttribute="top" id="xxy-rC-yGM"/>
+                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="3ZH-TQ-mlI"/>
+                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="top" secondItem="eb5-Ba-TGE" secondAttribute="bottom" id="GUa-RK-EDc"/>
+                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="Mfp-4H-Ue3"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="QiJ-sR-JGE"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="top" secondItem="qpM-xd-9Aa" secondAttribute="bottom" id="ULZ-k8-awv"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="bottom" secondItem="vEm-yf-fR5" secondAttribute="bottom" id="WLd-hJ-iit"/>
+                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="YG3-Qz-pAk"/>
+                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="top" secondItem="vEm-yf-fR5" secondAttribute="top" id="qRq-I8-R6p"/>
+                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="qoE-6U-LcA"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="reI-Xv-rTl"/>
                 </constraints>
             </view>
             <connections>
@@ -44,4 +69,7 @@
             <point key="canvasLocation" x="-190.07633587786259" y="5.6338028169014089"/>
         </viewController>
     </objects>
+    <resources>
+        <image name="menubar.rectangle" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
