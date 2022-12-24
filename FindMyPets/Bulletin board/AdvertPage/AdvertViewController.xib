@@ -18,7 +18,7 @@
                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InN-8h-2aY">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <items>
-                            <navigationItem title="Title" id="MTe-9O-nxq">
+                            <navigationItem id="MTe-9O-nxq">
                                 <barButtonItem key="leftBarButtonItem" title="&lt; Объявления" id="irP-5C-fHD">
                                     <connections>
                                         <action selector="backTapped:" destination="EhM-kM-J0E" id="VHV-9I-Hdl"/>
@@ -198,6 +198,13 @@
                 </constraints>
             </view>
             <size key="freeformSize" width="414" height="1200"/>
+            <connections>
+                <outlet property="advertName" destination="rGp-xe-5Jz" id="4w2-Fr-z9Q"/>
+                <outlet property="descriptoinName" destination="7mm-66-mPt" id="LPW-8u-CcJ"/>
+                <outlet property="lostAdress" destination="ESj-0E-vCa" id="lgo-Ul-BUV"/>
+                <outlet property="oldPet" destination="XZr-5B-9lQ" id="ePS-L4-Hep"/>
+                <outlet property="typePet" destination="U8E-ud-4To" id="v8O-Rg-nLX"/>
+            </connections>
             <point key="canvasLocation" x="21.739130434782609" y="79.6875"/>
         </viewController>
     </objects>
