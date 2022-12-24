@@ -13,6 +13,7 @@ class BulletinCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var advertName: UILabel!
     @IBOutlet weak var informationText: UILabel!
     var cell: BulletinCollectionViewCell!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

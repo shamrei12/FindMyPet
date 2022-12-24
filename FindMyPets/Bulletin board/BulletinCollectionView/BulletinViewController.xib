@@ -23,6 +23,11 @@
                                         <action selector="menuTapped:" destination="VBQ-iu-0iA" id="R9D-2r-hnx"/>
                                     </connections>
                                 </barButtonItem>
+                                <barButtonItem key="rightBarButtonItem" title="Создать объявление" id="WJN-OS-yk8">
+                                    <connections>
+                                        <action selector="createAdvert:" destination="VBQ-iu-0iA" id="62j-an-h5w"/>
+                                    </connections>
+                                </barButtonItem>
                             </navigationItem>
                         </items>
                     </navigationBar>
