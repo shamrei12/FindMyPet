@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAdvertViewController" customModule="FindMyPets" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="Ze7-Mv-Prt" customClass="CreateAdvertViewController" customModule="FindMyPets" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="I03-pF-jyN">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tar-5f-ONd">
+                        <rect key="frame" x="0.0" y="59" width="393" height="34.333333333333343"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFs-o1-cLz">
+                                <rect key="frame" x="0.0" y="0.0" width="103" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Отменить"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="Ze7-Mv-Prt" eventType="touchUpInside" id="2bT-8L-az9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="844-DG-cOU">
+                                <rect key="frame" x="283.66666666666669" y="0.0" width="109.33333333333331" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сохранить"/>
+                                <connections>
+                                    <action selector="createAdvert:" destination="Ze7-Mv-Prt" eventType="touchUpInside" id="hxN-Sb-XIC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="q6M-3Z-l0y">
+                        <rect key="frame" x="10" y="123.33333333333331" width="373" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="woT-gT-ryy"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ESF-Xb-RWh">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите название объявления" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-Ha-4Xf">
+                        <rect key="frame" x="10" y="253.33333333333337" width="373" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Подробное описание" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-sq-uip">
+                        <rect key="frame" x="10" y="297.33333333333331" width="373" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="nxJ-me-NhI">
+                        <rect key="frame" x="10" y="381.33333333333331" width="373" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-yN-SOq">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                <menu key="menu" title="Titile" id="Z57-Zj-JwJ">
+                                    <children>
+                                        <command title="Собака" id="APv-n4-kfM"/>
+                                        <command title="Кот/кошка" id="hfM-Sp-2CR"/>
+                                        <command title="Другое" id="jNZ-WJ-Dvh"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Тип питомца"/>
+                                <state key="selected" title="Figth"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aha-8Z-uoh">
+                                <rect key="frame" x="223" y="0.0" width="150" height="30"/>
+                                <menu key="menu" id="SO8-Aj-YYL">
+                                    <children>
+                                        <command title="До 1 года" id="Jlh-Ji-JQb"/>
+                                        <command title="От 1 до 3 лет" id="dNa-zn-FTk"/>
+                                        <command title="Больше 3 лет" id="XSH-ou-GIq"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Возраст"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tCY-fx-E4j">
+                        <rect key="frame" x="10" y="461.33333333333331" width="373" height="62.333333333333314"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес где последний раз видели" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jo-n5-MtP">
+                                <rect key="frame" x="0.0" y="0.0" width="265.66666666666669" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZn-6h-wQC">
+                                <rect key="frame" x="0.0" y="28.333333333333371" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pZn-6h-wQC" secondAttribute="trailing" id="BkG-fe-B6t"/>
+                            <constraint firstItem="pZn-6h-wQC" firstAttribute="leading" secondItem="tCY-fx-E4j" secondAttribute="leading" id="Y6r-gZ-rqp"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="fdK-oO-jPn"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="q6M-3Z-l0y" secondAttribute="trailing" constant="10" id="4hL-uK-gqH"/>
+                    <constraint firstItem="nxJ-me-NhI" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="7XW-AC-Tls"/>
+                    <constraint firstItem="tCY-fx-E4j" firstAttribute="top" secondItem="nxJ-me-NhI" secondAttribute="bottom" constant="50" id="9gs-LV-hby"/>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="q6M-3Z-l0y" secondAttribute="trailing" constant="10" id="9ig-JJ-SZu"/>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="cRc-sq-uip" secondAttribute="trailing" constant="10" id="Boe-bO-f0s"/>
+                    <constraint firstItem="nxJ-me-NhI" firstAttribute="top" secondItem="cRc-sq-uip" secondAttribute="bottom" constant="50" id="ELH-GJ-U7O"/>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="tar-5f-ONd" secondAttribute="trailing" id="EZn-sI-XvO"/>
+                    <constraint firstItem="cRc-sq-uip" firstAttribute="top" secondItem="l7J-Ha-4Xf" secondAttribute="bottom" constant="10" id="HYy-b7-PBq"/>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="tCY-fx-E4j" secondAttribute="trailing" constant="10" id="Iqh-wj-lSP"/>
+                    <constraint firstItem="cRc-sq-uip" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="MPO-bl-r1p"/>
+                    <constraint firstItem="tar-5f-ONd" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" id="OOT-AT-1VN"/>
+                    <constraint firstItem="l7J-Ha-4Xf" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="PEM-B6-O3O"/>
+                    <constraint firstItem="q6M-3Z-l0y" firstAttribute="top" secondItem="tar-5f-ONd" secondAttribute="bottom" constant="30" id="ReK-B9-uy0"/>
+                    <constraint firstItem="q6M-3Z-l0y" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="VXi-LF-k7t"/>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="nxJ-me-NhI" secondAttribute="trailing" constant="10" id="YIc-d0-b8i"/>
+                    <constraint firstItem="tar-5f-ONd" firstAttribute="top" secondItem="fdK-oO-jPn" secondAttribute="top" id="euC-Gs-MQO"/>
+                    <constraint firstItem="q6M-3Z-l0y" firstAttribute="top" secondItem="tar-5f-ONd" secondAttribute="bottom" constant="30" id="gXm-nY-Ud9"/>
+                    <constraint firstItem="l7J-Ha-4Xf" firstAttribute="top" secondItem="q6M-3Z-l0y" secondAttribute="bottom" constant="30" id="hrt-hk-EOa"/>
+                    <constraint firstItem="q6M-3Z-l0y" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="rb9-zM-Bi8"/>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="l7J-Ha-4Xf" secondAttribute="trailing" constant="10" id="t46-5L-EMw"/>
+                    <constraint firstItem="tCY-fx-E4j" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="unD-yM-BKv"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="typePet" destination="UqS-yN-SOq" id="0bh-A4-9Jv"/>
+                <outlet property="yoPet" destination="Aha-8Z-uoh" id="2ab-Sc-zOf"/>
+            </connections>
+            <point key="canvasLocation" x="74" y="24"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

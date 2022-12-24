@@ -21,6 +21,9 @@
 		D8CC7ADE2955BF9900D24F03 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7ADD2955BF9900D24F03 /* ContainerViewController.swift */; };
 		D8CC7AE22955EB8D00D24F03 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AE02955EB8D00D24F03 /* MenuViewController.swift */; };
 		D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AE12955EB8D00D24F03 /* MenuViewController.xib */; };
+		D8CC7AE62956F20E00D24F03 /* Lostpet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AE52956F20E00D24F03 /* Lostpet.swift */; };
+		D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */; };
+		D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		D8CC7ADD2955BF9900D24F03 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		D8CC7AE02955EB8D00D24F03 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D8CC7AE12955EB8D00D24F03 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		D8CC7AE52956F20E00D24F03 /* Lostpet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lostpet.swift; sourceTree = "<group>"; };
+		D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
+		D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 		D89C3346294F277200146974 /* FindMyPets */ = {
 			isa = PBXGroup;
 			children = (
+				D8CC7AE42956F1B900D24F03 /* Model */,
 				D8CC7ADC2955BF7600D24F03 /* Container */,
 				D89C335B294F291200146974 /* Bulletin board */,
 				D89C3347294F277200146974 /* AppDelegate.swift */,
@@ -87,6 +94,7 @@
 		D89C335B294F291200146974 /* Bulletin board */ = {
 			isa = PBXGroup;
 			children = (
+				D8CC7AE72956F8CA00D24F03 /* formCreateAdvert */,
 				D8CC7ADF2955EB5300D24F03 /* MenuView */,
 				D89C33682950EDCF00146974 /* AdvertPage */,
 				D89C3363294F2D2000146974 /* BulletinViewCell */,
@@ -137,6 +145,23 @@
 				D8CC7AE12955EB8D00D24F03 /* MenuViewController.xib */,
 			);
 			path = MenuView;
+			sourceTree = "<group>";
+		};
+		D8CC7AE42956F1B900D24F03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8CC7AE52956F20E00D24F03 /* Lostpet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8CC7AE72956F8CA00D24F03 /* formCreateAdvert */ = {
+			isa = PBXGroup;
+			children = (
+				D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */,
+				D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */,
+			);
+			path = formCreateAdvert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +224,7 @@
 			files = (
 				D89C336C2950EE0300146974 /* AdvertViewController.xib in Resources */,
 				D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */,
+				D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */,
 				D89C3360294F297B00146974 /* BulletinViewController.xib in Resources */,
 				D89C3367294F2D4300146974 /* BulletinCollectionViewCell.xib in Resources */,
 				D89C3354294F277300146974 /* LaunchScreen.storyboard in Resources */,
@@ -215,11 +241,13 @@
 			files = (
 				D89C3348294F277200146974 /* AppDelegate.swift in Sources */,
 				D89C334A294F277200146974 /* SceneDelegate.swift in Sources */,
+				D8CC7AE62956F20E00D24F03 /* Lostpet.swift in Sources */,
 				D8CC7ADE2955BF9900D24F03 /* ContainerViewController.swift in Sources */,
 				D89C335F294F297B00146974 /* BulletinViewController.swift in Sources */,
 				D89C3366294F2D4300146974 /* BulletinCollectionViewCell.swift in Sources */,
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
 				D89C3362294F2A1300146974 /* Extension.swift in Sources */,
+				D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */,
 				D8CC7AE22955EB8D00D24F03 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

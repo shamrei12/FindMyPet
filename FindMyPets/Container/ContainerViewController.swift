@@ -38,7 +38,7 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
                     }
     }
     
-    func showWeatherViewController(shouldMove: Bool ) {
+    func showBulletinViewController(shouldMove: Bool ) {
         if shouldMove {
             // show
             UIView.animate(withDuration: 0.5,
@@ -65,6 +65,7 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
     func toogleMenu() {
         configureMenuViewController()
         isMove = !isMove
-        showWeatherViewController(shouldMove: isMove)
+        showBulletinViewController(shouldMove: isMove)
+       
     }
 }
