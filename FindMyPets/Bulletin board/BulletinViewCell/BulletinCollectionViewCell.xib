@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccy-6G-hj3">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cry-FG-A7P">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cry-FG-A7P">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GDW-33-qVq">
@@ -31,17 +31,17 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="slg-Rm-kda">
-                                        <rect key="frame" x="100" y="0.0" width="200" height="71"/>
+                                        <rect key="frame" x="110" y="0.0" width="190" height="96"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропала собака по кличке &quot;Семен&quot;" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2W-jw-6BG">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="39.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропала собака в районе ул. Ленинская магазин &quot;Копеечка&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEt-f4-ZTI">
-                                                <rect key="frame" x="0.0" y="49.333333333333336" width="200" height="21.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <rect key="frame" x="0.0" y="49.333333333333343" width="190" height="46.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

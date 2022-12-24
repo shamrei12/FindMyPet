@@ -24,6 +24,7 @@
 		D8CC7AE62956F20E00D24F03 /* Lostpet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AE52956F20E00D24F03 /* Lostpet.swift */; };
 		D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */; };
 		D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */; };
+		D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D8CC7AE52956F20E00D24F03 /* Lostpet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lostpet.swift; sourceTree = "<group>"; };
 		D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
 		D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
+		D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AdvertData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				D89C3355294F277300146974 /* Info.plist */,
 				D89C3361294F2A1300146974 /* Extension.swift */,
 				D89C3350294F277300146974 /* Assets.xcassets */,
+				D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */,
 			);
 			path = FindMyPets;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				D8CC7ADE2955BF9900D24F03 /* ContainerViewController.swift in Sources */,
 				D89C335F294F297B00146974 /* BulletinViewController.swift in Sources */,
 				D89C3366294F2D4300146974 /* BulletinCollectionViewCell.swift in Sources */,
+				D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */,
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
 				D89C3362294F2A1300146974 /* Extension.swift in Sources */,
 				D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */,
@@ -458,6 +462,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */,
+			);
+			currentVersion = D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */;
+			path = AdvertData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D89C333C294F277200146974 /* Project object */;
 }

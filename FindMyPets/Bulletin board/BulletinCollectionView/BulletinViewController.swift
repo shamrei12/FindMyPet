@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 extension BulletinViewController: UICollectionViewDelegate {
     
@@ -27,7 +28,6 @@ extension BulletinViewController: UICollectionViewDataSource {
     }
     
     private func configure(cell: BulletinCollectionViewCell, for indexPath: IndexPath) -> UICollectionViewCell {
-        reloadList()
         cell.advertName.text = listAdvert[indexPath.row].postName
         cell.informationText.text = listAdvert[indexPath.row].descriptionName
         cell.imagePet.image = UIImage(named: "petImage.jpeg")
@@ -35,14 +35,12 @@ extension BulletinViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var CreateAdvertVC = CreateAdvertViewController.instantiate()
-        CreateAdvertVC.modalPresentationStyle = .fullScreen
-        present(CreateAdvertVC, animated: true)
+        let advertVC = AdvertViewController.instantiate()
+        advertVC.modalPresentationStyle = .fullScreen
+        advertVC.updateUI(indexPath.row)
+        present(advertVC, animated: true)
     }
 }
-
-
-
 
 protocol  BulletinViewControllerDeleagete {
     func toogleMenu()
@@ -58,24 +56,37 @@ class BulletinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
+        addPets()
     }
     
-    func addPets() {
-        userDefaults.set(listAdvert, forKey: key)
-    }
-    
-    func reloadList() {
-        listAdvert = userDefaults.object(forKey: key) as! [LostPet]
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         collectionView.reloadData()
     }
+    func addPets() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let fetchRequest: NSFetchRequest<Advert>
+        fetchRequest = Advert.fetchRequest()
+        let context = appDelegate.persistentContainer.viewContext
+        let objects = try! context.fetch(fetchRequest)
+        if objects.count > 0 {
+            for advert in 0..<objects.count {
+                listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].advertName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
+            }
+        }
+        
+        collectionView.reloadData()
+        
+        
+        //        listAdvert.append(LostPets(typePet: "dog", oldPet: "1-3", lostAdress: "lida, Mistsckevicha streed, h. 38", postName: "Потерялась собака по кличке семен", descriptionName: "Потерялась собака по кличке семен. У нее красный ошейник и белое ухо. Вознагрождение за находку"))
+    }
+    
+    
     
     @IBAction func createAdvert(_ sender: UIBarButtonItem) {
-        //        listAdvert.append(LostPets(typePet: "dog", oldPet: "1-3", lostAdress: "lida, Mistsckevicha streed, h. 38", postName: "Потерялась собака по кличке семен", descriptionName: "Потерялась собака по кличке семен. У нее красный ошейник и белое ухо. Вернем за вознагрождение"))
         let countryVC = CreateAdvertViewController.instantiate()
         countryVC.modalPresentationStyle = .fullScreen
         present(countryVC, animated: true)
-        
-        
     }
     
     @IBAction func menuTapped(_ sender: UIBarButtonItem) {
