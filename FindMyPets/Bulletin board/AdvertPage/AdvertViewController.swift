@@ -18,8 +18,6 @@ class AdvertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     func updateUI(_ index: Int) {
@@ -34,6 +32,7 @@ class AdvertViewController: UIViewController {
         oldPet.text = objects[index].oldPet
         lostAdress.text = objects[index].lostAdress
     }
+    
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }

@@ -56,11 +56,11 @@ class BulletinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
-        addPets()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        listAdvert = []
         addPets()
     }
     
@@ -70,18 +70,16 @@ class BulletinViewController: UIViewController {
         fetchRequest = Advert.fetchRequest()
         let context = appDelegate.persistentContainer.viewContext
         let objects = try! context.fetch(fetchRequest)
-        do {
-            try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
-            try context.save()
-        } catch let err {
-            print(err)
-        }
-        if objects.count > 0 {
+//        do {
+//            try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
+//            try context.save()
+//        } catch let err {
+//            print(err)
+//        }
+//
             for advert in 0..<objects.count {
                 listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].advertName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
             }
-        }
-        
         collectionView.reloadData()
         
     }
