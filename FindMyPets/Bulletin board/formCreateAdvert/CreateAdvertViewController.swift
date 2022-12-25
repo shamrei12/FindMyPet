@@ -30,7 +30,6 @@ class CreateAdvertViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func cancelTapped(_ sender: UIButton) {
-        print(typePet.titleLabel?.text!)
         dismiss(animated: true)
     }
     

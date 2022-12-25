@@ -7,17 +7,21 @@
 
 import UIKit
 
-class MenuViewController: UIViewController{
-
-
+class MenuViewController: UIViewController {
+    
+    @IBOutlet weak private var enterUser: UIButton!
+    @IBOutlet weak var registrationUser: UIButton!
+    var userDefaults = UserDefaults.standard
+    var key = "access"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    @IBAction func createTapped(_ sender: UIButton) {
-        let bulletinVC = ContainerViewController()
-        bulletinVC.showBulletinViewController(shouldMove: false)
     }
 
+
+    @IBAction func enterTapped(_ sender: UIButton) {
+        userDefaults.set(true, forKey: key)
+        let container = ContainerViewController()
+        container.toogleMenu()
+    }
 }

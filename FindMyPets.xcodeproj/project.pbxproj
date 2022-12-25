@@ -25,6 +25,8 @@
 		D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */; };
 		D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */; };
 		D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */; };
+		D8CC7AF529582AFE00D24F03 /* AfterMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF329582AFE00D24F03 /* AfterMenuViewController.swift */; };
+		D8CC7AF629582AFE00D24F03 /* AfterMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AF429582AFE00D24F03 /* AfterMenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
 		D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
 		D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AdvertData.xcdatamodel; sourceTree = "<group>"; };
+		D8CC7AF329582AFE00D24F03 /* AfterMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterMenuViewController.swift; sourceTree = "<group>"; };
+		D8CC7AF429582AFE00D24F03 /* AfterMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterMenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 			children = (
 				D8CC7AE02955EB8D00D24F03 /* MenuViewController.swift */,
 				D8CC7AE12955EB8D00D24F03 /* MenuViewController.xib */,
+				D8CC7AF329582AFE00D24F03 /* AfterMenuViewController.swift */,
+				D8CC7AF429582AFE00D24F03 /* AfterMenuViewController.xib */,
 			);
 			path = MenuView;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			files = (
 				D89C336C2950EE0300146974 /* AdvertViewController.xib in Resources */,
 				D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */,
+				D8CC7AF629582AFE00D24F03 /* AfterMenuViewController.xib in Resources */,
 				D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */,
 				D89C3360294F297B00146974 /* BulletinViewController.xib in Resources */,
 				D89C3367294F2D4300146974 /* BulletinCollectionViewCell.xib in Resources */,
@@ -252,6 +259,7 @@
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
 				D89C3362294F2A1300146974 /* Extension.swift in Sources */,
 				D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */,
+				D8CC7AF529582AFE00D24F03 /* AfterMenuViewController.swift in Sources */,
 				D8CC7AE22955EB8D00D24F03 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

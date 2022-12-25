@@ -61,14 +61,21 @@ class BulletinViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView.reloadData()
+        addPets()
     }
+    
     func addPets() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let fetchRequest: NSFetchRequest<Advert>
         fetchRequest = Advert.fetchRequest()
         let context = appDelegate.persistentContainer.viewContext
         let objects = try! context.fetch(fetchRequest)
+        do {
+            try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
+            try context.save()
+        } catch let err {
+            print(err)
+        }
         if objects.count > 0 {
             for advert in 0..<objects.count {
                 listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].advertName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
@@ -77,8 +84,6 @@ class BulletinViewController: UIViewController {
         
         collectionView.reloadData()
         
-        
-        //        listAdvert.append(LostPets(typePet: "dog", oldPet: "1-3", lostAdress: "lida, Mistsckevicha streed, h. 38", postName: "Потерялась собака по кличке семен", descriptionName: "Потерялась собака по кличке семен. У нее красный ошейник и белое ухо. Вознагрождение за находку"))
     }
     
     
