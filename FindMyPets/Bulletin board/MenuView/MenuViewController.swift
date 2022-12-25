@@ -8,7 +8,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    
+
     @IBOutlet weak private var enterUser: UIButton!
     @IBOutlet weak var registrationUser: UIButton!
     var userDefaults = UserDefaults.standard
@@ -21,7 +21,6 @@ class MenuViewController: UIViewController {
 
     @IBAction func enterTapped(_ sender: UIButton) {
         userDefaults.set(true, forKey: key)
-        let container = ContainerViewController()
-        container.toogleMenu()
+        
     }
 }
