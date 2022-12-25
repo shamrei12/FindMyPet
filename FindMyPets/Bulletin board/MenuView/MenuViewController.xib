@@ -12,35 +12,56 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="G9a-fY-KI6" customClass="MenuViewController" customModule="FindMyPets" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="baj-bi-o1h">
-                <rect key="frame" x="0.0" y="0.0" width="240" height="852"/>
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FindMyPet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPb-lG-Ycd">
-                        <rect key="frame" x="10" y="59" width="220" height="30"/>
+                        <rect key="frame" x="10" y="59" width="373" height="30"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVh-MG-beI">
-                        <rect key="frame" x="26" y="135" width="189" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVh-MG-beI">
+                        <rect key="frame" x="30" y="139" width="163" height="35.666666666666657"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Создать объявление"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Войти">
+                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                        </buttonConfiguration>
                         <connections>
-                            <action selector="createTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="3UD-W5-Ucq"/>
+                            <action selector="enterTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="6Kq-Yk-nsb"/>
                         </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0n-hT-Tit">
+                        <rect key="frame" x="30" y="184.66666666666666" width="163" height="35.666666666666657"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Регистрация">
+                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                        </buttonConfiguration>
                     </button>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="g8h-IC-jsJ"/>
                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                 <constraints>
+                    <constraint firstItem="gVh-MG-beI" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="30" id="7ix-YJ-skg"/>
+                    <constraint firstItem="g8h-IC-jsJ" firstAttribute="trailing" secondItem="gVh-MG-beI" secondAttribute="trailing" constant="200" id="Cn2-xd-J2s"/>
                     <constraint firstItem="JPb-lG-Ycd" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="10" id="Ec4-rE-2FX"/>
+                    <constraint firstItem="gVh-MG-beI" firstAttribute="top" secondItem="JPb-lG-Ycd" secondAttribute="bottom" constant="50" id="Fuf-7k-JwU"/>
+                    <constraint firstItem="g8h-IC-jsJ" firstAttribute="trailing" secondItem="a0n-hT-Tit" secondAttribute="trailing" constant="200" id="HTJ-Gu-qWt"/>
+                    <constraint firstItem="a0n-hT-Tit" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="30" id="Qd8-4R-7kR"/>
+                    <constraint firstItem="a0n-hT-Tit" firstAttribute="top" secondItem="gVh-MG-beI" secondAttribute="bottom" constant="10" id="Ubg-b8-jhp"/>
                     <constraint firstItem="g8h-IC-jsJ" firstAttribute="trailing" secondItem="JPb-lG-Ycd" secondAttribute="trailing" constant="10" id="YEJ-Cr-TzY"/>
                     <constraint firstItem="JPb-lG-Ycd" firstAttribute="top" secondItem="g8h-IC-jsJ" secondAttribute="top" id="jU8-BR-eb3"/>
                 </constraints>
             </view>
-            <size key="freeformSize" width="240" height="852"/>
-            <point key="canvasLocation" x="-102" y="-10"/>
+            <connections>
+                <outlet property="enterUser" destination="gVh-MG-beI" id="3zw-Tj-wxs"/>
+                <outlet property="registrationUser" destination="a0n-hT-Tit" id="HOx-YL-F3D"/>
+            </connections>
+            <point key="canvasLocation" x="-103.05343511450381" y="-10.563380281690142"/>
         </viewController>
     </objects>
     <resources>

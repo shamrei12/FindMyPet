@@ -28,7 +28,6 @@ class AdvertViewController: UIViewController {
         fetchRequest = Advert.fetchRequest()
         let context = appDelegate.persistentContainer.viewContext
         let objects = try! context.fetch(fetchRequest)
-        print(objects[index].typePet)
         advertName.text = objects[index].advertName
         descriptoinName.text = objects[index].descriptionName
         typePet.text = objects[index].typePet
