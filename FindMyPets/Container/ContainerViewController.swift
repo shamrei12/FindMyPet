@@ -34,15 +34,13 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
     }
     
     func configureMenuViewController() {
-        if userDefaults.object(forKey: key) == nil {
+        if (userDefaults.object(forKey: key) as? Bool) as? Bool == true {
                 menuViewController = MenuViewController.instantiate()
-                view.insertSubview(menuViewController.view, at: 0)
-                addChild(menuViewController)
-        } else if userDefaults.object(forKey: key) != nil {
-                menuViewController = AfterMenuViewController.instantiate()
-                view.insertSubview(menuViewController.view, at: 0)
-                addChild(menuViewController)
+        } else {
+            menuViewController = AfterMenuViewController.instantiate()
         }
+        view.insertSubview(menuViewController.view, at: 0)
+        addChild(menuViewController)
     }
         
         func showBulletinViewController(shouldMove: Bool ) {
@@ -73,6 +71,5 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
             configureMenuViewController()
             isMove = !isMove
             showBulletinViewController(shouldMove: isMove)
-            print(1)
         }
     }

@@ -18,8 +18,8 @@ class AdvertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
-    
     func updateUI(_ index: Int) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let fetchRequest: NSFetchRequest<Advert>
@@ -36,5 +36,7 @@ class AdvertViewController: UIViewController {
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
-
+    
 }
+
+

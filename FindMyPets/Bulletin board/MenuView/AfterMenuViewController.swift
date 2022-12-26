@@ -22,7 +22,7 @@ class AfterMenuViewController: UIViewController {
     }
 
     @IBAction func exitTappedUser(_ sender: UIButton) {
-        userDefaults.set(nil, forKey: key)
+        userDefaults.set(true, forKey: key)
         let container = ContainerViewController()
         delegateExit?.exitUserTapped()
     }

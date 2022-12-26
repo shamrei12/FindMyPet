@@ -8,9 +8,8 @@
 import UIKit
 import CoreData
 
-
-class CreateAdvertViewController: UIViewController, UITextViewDelegate {
-    
+class CreateAdvertViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+    @IBOutlet weak var rootView: UIView!
     @IBOutlet weak private var typePet: UIButton!
     @IBOutlet weak private var yoPet: UIButton!
     private var userDefaults = UserDefaults.standard
@@ -18,30 +17,57 @@ class CreateAdvertViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak private var advertName: UITextField!
     @IBOutlet weak private var descriptionName: UITextView!
     @IBOutlet weak var lostAdress: UITextField!
+    private var isMove: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionName.textColor = UIColor.lightGray
         descriptionName.layer.borderColor = UIColor.lightGray.cgColor
         descriptionName.layer.borderWidth = 0.5
-        descriptionName.delegate = self
+        lostAdress.delegate = self
         choiceType()
-        
+        self.hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        lostAdress.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
+    }
+    
+    @objc func editingBegan(_ textField: UITextField) {
+        isMove = true
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if isMove {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+        }
+
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        isMove = false
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
     
     @IBAction func cancelTapped(_ sender: UIButton) {
         dismiss(animated: true)
     }
     
+    
     @IBAction func createAdvert(_ sender: UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.newBackgroundContext()
-//                do {
-//                    try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
-//                    try context.save()
-//                } catch let err {
-//                    print(err)
-//                }
+        //                do {
+        //                    try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
+        //                    try context.save()
+        //                } catch let err {
+        //                    print(err)
+        //                }
         let entity = NSEntityDescription.entity(forEntityName: "Advert", in: context)
         guard let entity = entity else {
             return

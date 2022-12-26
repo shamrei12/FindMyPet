@@ -20,7 +20,7 @@ class MenuViewController: UIViewController {
 
 
     @IBAction func enterTapped(_ sender: UIButton) {
-        userDefaults.set(true, forKey: key)
+        userDefaults.set(false, forKey: key)
         
     }
 }

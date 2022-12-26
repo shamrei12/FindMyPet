@@ -136,6 +136,7 @@
                 <outlet property="advertName" destination="l7J-Ha-4Xf" id="iHa-5L-U3A"/>
                 <outlet property="descriptionName" destination="g9o-Hn-pWx" id="Vua-yn-YHX"/>
                 <outlet property="lostAdress" destination="pZn-6h-wQC" id="6Wi-Bb-ctZ"/>
+                <outlet property="rootView" destination="I03-pF-jyN" id="K3e-SN-buY"/>
                 <outlet property="typePet" destination="UqS-yN-SOq" id="0bh-A4-9Jv"/>
                 <outlet property="yoPet" destination="Aha-8Z-uoh" id="2ab-Sc-zOf"/>
             </connections>
