@@ -18,12 +18,14 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <items>
                             <navigationItem style="editor" id="JlD-Zg-LRq">
-                                <barButtonItem key="leftBarButtonItem" title="Item" image="menubar.rectangle" catalog="system" id="f68-Tx-nUh">
+                                <barButtonItem key="leftBarButtonItem" title="Item" image="menu_1" id="f68-Tx-nUh">
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="menuTapped:" destination="VBQ-iu-0iA" id="R9D-2r-hnx"/>
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem key="rightBarButtonItem" title="Создать объявление" id="WJN-OS-yk8">
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="createAdvert:" destination="VBQ-iu-0iA" id="62j-an-h5w"/>
                                     </connections>
@@ -70,11 +72,12 @@
             </view>
             <connections>
                 <outlet property="collectionView" destination="aNP-JE-aTc" id="kse-Cl-yc3"/>
+                <outlet property="menuTapped" destination="f68-Tx-nUh" id="mve-bi-b9Z"/>
             </connections>
             <point key="canvasLocation" x="-190.07633587786259" y="5.6338028169014089"/>
         </viewController>
     </objects>
     <resources>
-        <image name="menubar.rectangle" catalog="system" width="128" height="93"/>
+        <image name="menu_1" width="24" height="24"/>
     </resources>
 </document>

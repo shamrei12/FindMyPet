@@ -47,17 +47,33 @@ protocol  BulletinViewControllerDeleagete {
 }
 
 class BulletinViewController: UIViewController {
+    @IBOutlet weak private var menuTapped: UIBarButtonItem!
+    private var visibleMenu: Bool = true
+    private var menuImage = false
     var delegate: BulletinViewControllerDeleagete?
     private var listAdvert: [LostPet] = []
-    var userDefaults = UserDefaults.standard
-    var key: String = "listAdvert"
+    private var userDefaults = UserDefaults.standard
+    private var key: String = "listAdvert"
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
+        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
+        
     }
     
+    @objc func didTapScrollView() {
+        if menuImage {
+            menuTapped.image = UIImage(named: "menu_1.png")
+            menuImage = false
+        }
+        if !visibleMenu {
+            visibleMenu = true
+            hideMenu()
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         listAdvert = []
@@ -70,16 +86,16 @@ class BulletinViewController: UIViewController {
         fetchRequest = Advert.fetchRequest()
         let context = appDelegate.persistentContainer.viewContext
         let objects = try! context.fetch(fetchRequest)
-//        do {
-//            try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
-//            try context.save()
-//        } catch let err {
-//            print(err)
-//        }
-//
-            for advert in 0..<objects.count {
-                listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].advertName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
-            }
+        //        do {
+        //            try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
+        //            try context.save()
+        //        } catch let err {
+        //            print(err)
+        //        }
+        //
+        for advert in 0..<objects.count {
+            listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].advertName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
+        }
         collectionView.reloadData()
         
     }
@@ -92,8 +108,26 @@ class BulletinViewController: UIViewController {
         present(countryVC, animated: true)
     }
     
-    @IBAction func menuTapped(_ sender: UIBarButtonItem) {
+    
+    func hideMenu() {
         delegate?.toogleMenu()
+    }
+    
+    @IBAction func menuTapped(_ sender: UIBarButtonItem) {
+        if !menuImage {
+            menuImage = true
+            menuTapped.image = UIImage(named: "menu_2.png")
+        } else {
+            menuImage = false
+            menuTapped.image = UIImage(named: "menu_1.png")
+        }
+        if !visibleMenu {
+            visibleMenu = true
+        } else {
+            visibleMenu = false
+        }
+        
+        hideMenu()
     }
 }
 

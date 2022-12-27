@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="FindMyPets" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="x52-vY-ZQT" customClass="ProfileViewController" customModule="FindMyPets" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="kBn-jY-M5Y">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="G9h-vG-byq">
+                        <rect key="frame" x="100" y="153" width="193" height="225"/>
+                    </imageView>
+                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GM-rc-4Gu">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <items>
+                            <navigationItem title="Профиль" id="PYA-wA-6cM">
+                                <barButtonItem key="leftBarButtonItem" title="На главную" id="RIF-AY-Vk8">
+                                    <connections>
+                                        <action selector="backtapped:" destination="x52-vY-ZQT" id="rzj-np-xcZ"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem key="rightBarButtonItem" title="Сохранить" id="8xj-M0-pEB">
+                                    <connections>
+                                        <action selector="saveTapped:" destination="x52-vY-ZQT" id="ISK-s2-Acj"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Юрий" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCa-W8-bDh">
+                        <rect key="frame" x="100" y="385" width="193" height="25.666666666666686"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="mwX-EV-ePC">
+                        <rect key="frame" x="10" y="470.66666666666669" width="353" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-50-LOv">
+                                <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNt-tI-fbe">
+                                <rect key="frame" x="178.66666666666663" y="0.0" width="174.33333333333337" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="3YI-ic-qcX"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="2GM-rc-4Gu" firstAttribute="trailing" secondItem="3YI-ic-qcX" secondAttribute="trailing" id="4ve-qC-5vB"/>
+                    <constraint firstItem="uCa-W8-bDh" firstAttribute="top" secondItem="G9h-vG-byq" secondAttribute="bottom" constant="7" id="9Ie-3J-UZc"/>
+                    <constraint firstItem="2GM-rc-4Gu" firstAttribute="top" secondItem="3YI-ic-qcX" secondAttribute="top" id="9c3-K7-vem"/>
+                    <constraint firstItem="G9h-vG-byq" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="100" id="CQJ-0s-AeZ"/>
+                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="G9h-vG-byq" secondAttribute="trailing" constant="100" id="DPV-xz-0vk"/>
+                    <constraint firstItem="mwX-EV-ePC" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="10" id="FOu-zt-2BE"/>
+                    <constraint firstItem="2GM-rc-4Gu" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" id="Fn2-GA-v0D"/>
+                    <constraint firstItem="uCa-W8-bDh" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="100" id="GLV-0T-KOt"/>
+                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="mwX-EV-ePC" secondAttribute="trailing" constant="30" id="URf-3l-Pnt"/>
+                    <constraint firstItem="mwX-EV-ePC" firstAttribute="top" secondItem="uCa-W8-bDh" secondAttribute="bottom" constant="60" id="Vez-J4-cUP"/>
+                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="uCa-W8-bDh" secondAttribute="trailing" constant="100" id="dtC-LM-ih0"/>
+                    <constraint firstItem="G9h-vG-byq" firstAttribute="top" secondItem="2GM-rc-4Gu" secondAttribute="bottom" constant="50" id="vbn-hs-GV2"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="bulletinTupped" destination="RIF-AY-Vk8" id="IOX-a7-POg"/>
+                <outlet property="saveTapped" destination="8xj-M0-pEB" id="fYF-sU-ag8"/>
+            </connections>
+            <point key="canvasLocation" x="75" y="48"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="user" width="225" height="225"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
