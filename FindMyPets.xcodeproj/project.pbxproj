@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D82F9AF2295B56BA00439224 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F9AF0295B56BA00439224 /* ProfileViewController.swift */; };
+		D82F9AF3295B56BA00439224 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82F9AF1295B56BA00439224 /* ProfileViewController.xib */; };
 		D89C3348294F277200146974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C3347294F277200146974 /* AppDelegate.swift */; };
 		D89C334A294F277200146974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C3349294F277200146974 /* SceneDelegate.swift */; };
 		D89C3351294F277300146974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89C3350294F277300146974 /* Assets.xcassets */; };
@@ -25,11 +27,11 @@
 		D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */; };
 		D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */; };
 		D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */; };
-		D8CC7AF529582AFE00D24F03 /* AfterMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF329582AFE00D24F03 /* AfterMenuViewController.swift */; };
-		D8CC7AF629582AFE00D24F03 /* AfterMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AF429582AFE00D24F03 /* AfterMenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D82F9AF0295B56BA00439224 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D82F9AF1295B56BA00439224 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		D89C3344294F277200146974 /* FindMyPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89C3347294F277200146974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D89C3349294F277200146974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,8 +52,6 @@
 		D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
 		D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
 		D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AdvertData.xcdatamodel; sourceTree = "<group>"; };
-		D8CC7AF329582AFE00D24F03 /* AfterMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterMenuViewController.swift; sourceTree = "<group>"; };
-		D8CC7AF429582AFE00D24F03 /* AfterMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterMenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D82F9AF4295B570300439224 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D82F9AF0295B56BA00439224 /* ProfileViewController.swift */,
+				D82F9AF1295B56BA00439224 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		D89C333B294F277200146974 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +103,7 @@
 				D89C3361294F2A1300146974 /* Extension.swift */,
 				D89C3350294F277300146974 /* Assets.xcassets */,
 				D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */,
+				D82F9AF4295B570300439224 /* Profile */,
 			);
 			path = FindMyPets;
 			sourceTree = "<group>";
@@ -150,8 +160,6 @@
 			children = (
 				D8CC7AE02955EB8D00D24F03 /* MenuViewController.swift */,
 				D8CC7AE12955EB8D00D24F03 /* MenuViewController.xib */,
-				D8CC7AF329582AFE00D24F03 /* AfterMenuViewController.swift */,
-				D8CC7AF429582AFE00D24F03 /* AfterMenuViewController.xib */,
 			);
 			path = MenuView;
 			sourceTree = "<group>";
@@ -233,7 +241,7 @@
 			files = (
 				D89C336C2950EE0300146974 /* AdvertViewController.xib in Resources */,
 				D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */,
-				D8CC7AF629582AFE00D24F03 /* AfterMenuViewController.xib in Resources */,
+				D82F9AF3295B56BA00439224 /* ProfileViewController.xib in Resources */,
 				D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */,
 				D89C3360294F297B00146974 /* BulletinViewController.xib in Resources */,
 				D89C3367294F2D4300146974 /* BulletinCollectionViewCell.xib in Resources */,
@@ -255,11 +263,11 @@
 				D8CC7ADE2955BF9900D24F03 /* ContainerViewController.swift in Sources */,
 				D89C335F294F297B00146974 /* BulletinViewController.swift in Sources */,
 				D89C3366294F2D4300146974 /* BulletinCollectionViewCell.swift in Sources */,
+				D82F9AF2295B56BA00439224 /* ProfileViewController.swift in Sources */,
 				D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */,
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
 				D89C3362294F2A1300146974 /* Extension.swift in Sources */,
 				D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */,
-				D8CC7AF529582AFE00D24F03 /* AfterMenuViewController.swift in Sources */,
 				D8CC7AE22955EB8D00D24F03 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
