@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="Ze7-Mv-Prt" customClass="CreateAdvertViewController" customModule="FindMyPets" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="I03-pF-jyN">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tar-5f-ONd">
-                        <rect key="frame" x="0.0" y="59" width="393" height="34.333333333333343"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="34.333333333333336"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFs-o1-cLz">
                                 <rect key="frame" x="0.0" y="0.0" width="103" height="34.333333333333336"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="844-DG-cOU">
-                                <rect key="frame" x="283.66666666666669" y="0.0" width="109.33333333333331" height="34.333333333333336"/>
+                                <rect key="frame" x="304.66666666666669" y="0.0" width="109.33333333333331" height="34.333333333333336"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Сохранить"/>
                                 <connections>
@@ -38,7 +38,7 @@
                         </subviews>
                     </stackView>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="q6M-3Z-l0y">
-                        <rect key="frame" x="10" y="123.33333333333331" width="373" height="200"/>
+                        <rect key="frame" x="10" y="64.333333333333314" width="394" height="200"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" id="woT-gT-ryy"/>
@@ -51,22 +51,22 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите название объявления" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l7J-Ha-4Xf">
-                        <rect key="frame" x="10" y="353.33333333333331" width="373" height="34"/>
+                        <rect key="frame" x="10" y="294.33333333333331" width="394" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Введите подробное описание" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9o-Hn-pWx">
-                        <rect key="frame" x="10" y="407.33333333333331" width="373" height="129.99999999999994"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Описание" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g9o-Hn-pWx">
+                        <rect key="frame" x="10" y="348.33333333333331" width="394" height="123.66666666666669"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="nxJ-me-NhI">
-                        <rect key="frame" x="10" y="587.33333333333337" width="373" height="30"/>
+                        <rect key="frame" x="10" y="522" width="394" height="30"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-yN-SOq">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="30"/>
                                 <menu key="menu" title="Titile" id="Z57-Zj-JwJ">
                                     <children>
                                         <command title="Собака" id="APv-n4-kfM"/>
@@ -78,7 +78,7 @@
                                 <state key="selected" title="Figth"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aha-8Z-uoh">
-                                <rect key="frame" x="223" y="0.0" width="150" height="30"/>
+                                <rect key="frame" x="233.66666666666663" y="0.0" width="160.33333333333337" height="30"/>
                                 <menu key="menu" id="SO8-Aj-YYL">
                                     <children>
                                         <command title="До 1 года" id="Jlh-Ji-JQb"/>
@@ -91,10 +91,10 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tCY-fx-E4j">
-                        <rect key="frame" x="10" y="667.33333333333337" width="373" height="34"/>
+                        <rect key="frame" x="10" y="602" width="394" height="34"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Адрес где видели последний раз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZn-6h-wQC">
-                                <rect key="frame" x="0.0" y="0.0" width="373" height="34"/>
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -126,7 +126,7 @@
                     <constraint firstItem="nxJ-me-NhI" firstAttribute="top" secondItem="g9o-Hn-pWx" secondAttribute="bottom" constant="50" id="fDu-fM-eyu"/>
                     <constraint firstItem="q6M-3Z-l0y" firstAttribute="top" secondItem="tar-5f-ONd" secondAttribute="bottom" constant="30" id="gXm-nY-Ud9"/>
                     <constraint firstItem="l7J-Ha-4Xf" firstAttribute="top" secondItem="q6M-3Z-l0y" secondAttribute="bottom" constant="30" id="hrt-hk-EOa"/>
-                    <constraint firstItem="fdK-oO-jPn" firstAttribute="bottom" secondItem="tCY-fx-E4j" secondAttribute="bottom" constant="116.66666666666663" id="kg6-mC-GFD"/>
+                    <constraint firstItem="fdK-oO-jPn" firstAttribute="bottom" secondItem="tCY-fx-E4j" secondAttribute="bottom" constant="100" id="kg6-mC-GFD"/>
                     <constraint firstItem="q6M-3Z-l0y" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="rb9-zM-Bi8"/>
                     <constraint firstItem="fdK-oO-jPn" firstAttribute="trailing" secondItem="l7J-Ha-4Xf" secondAttribute="trailing" constant="10" id="t46-5L-EMw"/>
                     <constraint firstItem="tCY-fx-E4j" firstAttribute="leading" secondItem="fdK-oO-jPn" secondAttribute="leading" constant="10" id="unD-yM-BKv"/>

@@ -4,26 +4,45 @@
 //
 //  Created by Алексей Шамрей on 24.12.22.
 //
-
 import UIKit
 import CoreData
 
-class CreateAdvertViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+
+extension CreateAdvertViewController: UITextViewDelegate {
+    
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Описание"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+}
+
+class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak private var typePet: UIButton!
     @IBOutlet weak private var yoPet: UIButton!
     private var userDefaults = UserDefaults.standard
     private var key: String = "listAdvert"
     @IBOutlet weak private var advertName: UITextField!
-    @IBOutlet weak private var descriptionName: UITextView!
+    @IBOutlet weak var descriptionName: UITextView!
     @IBOutlet weak var lostAdress: UITextField!
     private var isMove: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionName.textColor = UIColor.lightGray
+        descriptionName.textColor = .lightGray
         descriptionName.layer.borderColor = UIColor.lightGray.cgColor
         descriptionName.layer.borderWidth = 0.5
+        descriptionName.delegate = self
         lostAdress.delegate = self
         choiceType()
         self.hideKeyboardWhenTappedAround()
@@ -113,20 +132,5 @@ class CreateAdvertViewController: UIViewController, UITextViewDelegate, UITextFi
         yoPet.showsMenuAsPrimaryAction = true
         yoPet.changesSelectionAsPrimaryAction = true
     }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if descriptionName.textColor == .lightGray {
-            descriptionName.text = ""
-            descriptionName.textColor = .black
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if descriptionName.text.isEmpty {
-            descriptionName.text = "Введите подробное описание"
-            descriptionName.textColor = UIColor.lightGray
-        }
-    }
-    
-    
 }
+

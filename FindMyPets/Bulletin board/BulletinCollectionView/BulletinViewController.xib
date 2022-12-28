@@ -71,6 +71,7 @@
                 </constraints>
             </view>
             <connections>
+                <outlet property="bulletinView" destination="aet-xj-q9R" id="gdw-0c-0zr"/>
                 <outlet property="collectionView" destination="aNP-JE-aTc" id="kse-Cl-yc3"/>
                 <outlet property="menuTapped" destination="f68-Tx-nUh" id="mve-bi-b9Z"/>
             </connections>
