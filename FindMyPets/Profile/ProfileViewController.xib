@@ -35,25 +35,40 @@
                             </navigationItem>
                         </items>
                     </navigationBar>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Юрий" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCa-W8-bDh">
-                        <rect key="frame" x="100" y="385" width="193" height="25.666666666666686"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="mwX-EV-ePC">
-                        <rect key="frame" x="10" y="470.66666666666669" width="353" height="34"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xl3-i3-yL3">
+                        <rect key="frame" x="10" y="423" width="373" height="34.333333333333314"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-50-LOv">
-                                <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNt-tI-fbe">
-                                <rect key="frame" x="178.66666666666663" y="0.0" width="174.33333333333337" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Аноним" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCa-W8-bDh">
+                                <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-p6-iaI">
+                                <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
+                                <connections>
+                                    <action selector="changeName:" destination="x52-vY-ZQT" eventType="touchUpInside" id="U3W-h8-Zdl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mwX-EV-ePC">
+                        <rect key="frame" x="10" y="467.33333333333331" width="373" height="34.333333333333314"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNt-tI-fbe">
+                                <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUG-ll-E5J">
+                                <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
+                                <connections>
+                                    <action selector="changeNumber:" destination="x52-vY-ZQT" eventType="touchUpInside" id="Ewc-1p-71A"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -61,24 +76,28 @@
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="2GM-rc-4Gu" firstAttribute="trailing" secondItem="3YI-ic-qcX" secondAttribute="trailing" id="4ve-qC-5vB"/>
-                    <constraint firstItem="uCa-W8-bDh" firstAttribute="top" secondItem="G9h-vG-byq" secondAttribute="bottom" constant="7" id="9Ie-3J-UZc"/>
                     <constraint firstItem="2GM-rc-4Gu" firstAttribute="top" secondItem="3YI-ic-qcX" secondAttribute="top" id="9c3-K7-vem"/>
                     <constraint firstItem="G9h-vG-byq" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="100" id="CQJ-0s-AeZ"/>
                     <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="G9h-vG-byq" secondAttribute="trailing" constant="100" id="DPV-xz-0vk"/>
                     <constraint firstItem="mwX-EV-ePC" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="10" id="FOu-zt-2BE"/>
                     <constraint firstItem="2GM-rc-4Gu" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" id="Fn2-GA-v0D"/>
-                    <constraint firstItem="uCa-W8-bDh" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="100" id="GLV-0T-KOt"/>
-                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="mwX-EV-ePC" secondAttribute="trailing" constant="30" id="URf-3l-Pnt"/>
-                    <constraint firstItem="mwX-EV-ePC" firstAttribute="top" secondItem="uCa-W8-bDh" secondAttribute="bottom" constant="60" id="Vez-J4-cUP"/>
-                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="uCa-W8-bDh" secondAttribute="trailing" constant="100" id="dtC-LM-ih0"/>
+                    <constraint firstItem="mwX-EV-ePC" firstAttribute="top" secondItem="Xl3-i3-yL3" secondAttribute="bottom" constant="10" id="IAi-Pd-fil"/>
+                    <constraint firstItem="Xl3-i3-yL3" firstAttribute="top" secondItem="G9h-vG-byq" secondAttribute="bottom" constant="45" id="OXG-iO-0zq"/>
+                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="mwX-EV-ePC" secondAttribute="trailing" constant="10" id="URf-3l-Pnt"/>
+                    <constraint firstItem="Xl3-i3-yL3" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="10" id="dYJ-GW-mFw"/>
+                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="Xl3-i3-yL3" secondAttribute="trailing" constant="10" id="iur-0T-xuj"/>
                     <constraint firstItem="G9h-vG-byq" firstAttribute="top" secondItem="2GM-rc-4Gu" secondAttribute="bottom" constant="50" id="vbn-hs-GV2"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="bulletinTupped" destination="RIF-AY-Vk8" id="IOX-a7-POg"/>
+                <outlet property="changeName" destination="a2x-p6-iaI" id="IAD-Wk-rFJ"/>
+                <outlet property="changeNumber" destination="jUG-ll-E5J" id="gA9-oS-6TY"/>
+                <outlet property="nameLabel" destination="uCa-W8-bDh" id="SKg-WT-Qse"/>
+                <outlet property="numberLabel" destination="SNt-tI-fbe" id="D2v-qq-t2n"/>
                 <outlet property="saveTapped" destination="8xj-M0-pEB" id="fYF-sU-ag8"/>
             </connections>
-            <point key="canvasLocation" x="75" y="48"/>
+            <point key="canvasLocation" x="74.045801526717554" y="47.887323943661976"/>
         </viewController>
     </objects>
     <resources>

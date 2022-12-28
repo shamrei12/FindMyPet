@@ -204,6 +204,7 @@
                 <outlet property="lostAdress" destination="ESj-0E-vCa" id="lgo-Ul-BUV"/>
                 <outlet property="oldPet" destination="XZr-5B-9lQ" id="ePS-L4-Hep"/>
                 <outlet property="typePet" destination="U8E-ud-4To" id="v8O-Rg-nLX"/>
+                <outlet property="username" destination="yKH-xy-1nP" id="aBw-hW-VhI"/>
             </connections>
             <point key="canvasLocation" x="21.739130434782609" y="79.6875"/>
         </viewController>

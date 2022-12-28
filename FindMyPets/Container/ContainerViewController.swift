@@ -40,7 +40,6 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
             view.insertSubview(menuViewController.view, at: 0)
             addChild(menuViewController)
         }
-        
     }
     
     func showBulletinViewController(shouldMove: Bool ) {
@@ -74,7 +73,8 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
     }
     
     func hideMenu() {
-        configureMenuViewController()
-        showBulletinViewController(shouldMove: false)
+        configureBulletinViewController()
+        showBulletinViewController(shouldMove: true)
     }
+
 }

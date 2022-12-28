@@ -95,6 +95,7 @@
 			children = (
 				D8CC7AE42956F1B900D24F03 /* Model */,
 				D8CC7ADC2955BF7600D24F03 /* Container */,
+				D82F9AF4295B570300439224 /* Profile */,
 				D89C335B294F291200146974 /* Bulletin board */,
 				D89C3347294F277200146974 /* AppDelegate.swift */,
 				D89C3349294F277200146974 /* SceneDelegate.swift */,
@@ -103,7 +104,6 @@
 				D89C3361294F2A1300146974 /* Extension.swift */,
 				D89C3350294F277300146974 /* Assets.xcassets */,
 				D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */,
-				D82F9AF4295B570300439224 /* Profile */,
 			);
 			path = FindMyPets;
 			sourceTree = "<group>";

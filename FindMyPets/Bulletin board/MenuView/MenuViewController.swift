@@ -8,17 +8,24 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    @IBOutlet weak var menuView: UIView!
     var userDefaults = UserDefaults.standard
     var key = "access"
-    let container = BulletinViewController()
+    private var menuImage = false
+    let container = ContainerViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
+
     }
 
+        @objc func didTapScrollView() {
+            container.hideMenu()
+            print(1)
+        }
+    
     @IBAction func profileTapped(_ sender: UIButton) {
-        container.didTapScrollView()
         let profile = ProfileViewController.instantiate()
         profile.modalPresentationStyle = .fullScreen
         present(profile, animated: true)
