@@ -17,30 +17,28 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var changeNumber: UIButton!
     
     @IBOutlet weak private var nameLabel: UITextField!
-    @IBOutlet weak var numberLabel: UITextField!
-    
-    var userDefaults = UserDefaults.standard
-    private var nameKey: String = "name"
-    private var numberKey: String = "number"
-    
+    @IBOutlet weak private var numberLabel: UITextField!
+    private var user: UserDefaultsModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = UserDefaultsModel()
         updateUI()
+        
+    }
+    
+    func updateUI() {
+        let profile = user?.load()
         nameLabel.borderStyle = .none
         numberLabel.borderStyle = .none
         nameLabel.isUserInteractionEnabled = false
         numberLabel.isUserInteractionEnabled = false
+        nameLabel.placeholder = profile?.first?.name ?? ""
+        numberLabel.placeholder = profile?.first?.number ?? ""
+
+
     }
     
-    func updateUI() {
-        let name = userDefaults.object(forKey: nameKey) as! String
-        let number = userDefaults.object(forKey: numberKey) as? String
-        print(name)
-        nameLabel.placeholder = "\(name)"
-        numberLabel.placeholder = "\(number!)"
-        
-    }
     @IBAction func changeName(_ sender: UIButton) {
         if changeName.titleLabel!.text! == "Изменить" {
             nameLabel.borderStyle = .roundedRect
@@ -57,7 +55,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
                 nameLabel.text = ""
                 changeName.setTitle("Изменить", for: .normal)
             }
-
         }
     }
     
@@ -67,11 +64,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             numberLabel.isUserInteractionEnabled = true
             changeNumber.setTitle("Сохранить", for: .normal)
         } else {
-            numberLabel.borderStyle = .none
-            numberLabel.isUserInteractionEnabled = false
-            numberLabel.placeholder = "\(numberLabel.text!)"
-            numberLabel.text = ""
-            changeNumber.setTitle("Изменить", for: .normal)
+            if numberLabel.text != "" {
+                numberLabel.borderStyle = .none
+                numberLabel.isUserInteractionEnabled = false
+                numberLabel.placeholder = "\(numberLabel.text ?? "")"
+                numberLabel.text = ""
+                changeNumber.setTitle("Изменить", for: .normal)
+            }
         }
     }
     
@@ -81,9 +80,11 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
-        numberLabel.placeholder = numberLabel.text
-        userDefaults.set("\(nameLabel.placeholder!)", forKey: nameKey)
-        userDefaults.set("\(numberLabel.placeholder!)", forKey: numberKey)
+        let number: String = numberLabel.placeholder!
+        let name: String = nameLabel.placeholder!
+        var profiele: [ProfileProtocol] = []
+        profiele.append(Profile(name: name, number: number))
+        user?.save(data: profiele)
         dismiss(animated: true)
     }
 }

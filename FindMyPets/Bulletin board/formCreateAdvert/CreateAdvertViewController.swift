@@ -36,9 +36,11 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var descriptionName: UITextView!
     @IBOutlet weak var lostAdress: UITextField!
     private var isMove: Bool = false
+    private var data: Data?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        data = Data()
         descriptionName.textColor = .lightGray
         descriptionName.layer.borderColor = UIColor.lightGray.cgColor
         descriptionName.layer.borderWidth = 0.5
@@ -79,31 +81,9 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func createAdvert(_ sender: UIButton) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.newBackgroundContext()
-        //                do {
-        //                    try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
-        //                    try context.save()
-        //                } catch let err {
-        //                    print(err)
-        //                }
-        let entity = NSEntityDescription.entity(forEntityName: "Advert", in: context)
-        guard let entity = entity else {
-            return
-        }
-        let taskObject = NSManagedObject(entity: entity, insertInto: context) as! Advert
-        
-        taskObject.advertName = advertName.text ?? ""
-        taskObject.descriptionName = descriptionName.text ?? ""
-        taskObject.typePet = typePet.titleLabel?.text ?? ""
-        taskObject.oldPet = yoPet.titleLabel?.text ?? ""
-        taskObject.lostAdress = lostAdress.text ?? ""
-        do {
-            try context.save()
-            print(true)
-        } catch {
-            print(error.localizedDescription)
-        }
+        var advert: [LostPet] = []
+        advert.append(LostPets(typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", postName: advertName.text ?? "", descriptionName: descriptionName.text ?? ""))
+        data?.save(data: advert)
         dismiss(animated: true)
     }
     
