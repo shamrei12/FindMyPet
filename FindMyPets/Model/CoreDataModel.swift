@@ -12,12 +12,21 @@ import UIKit
 
 
 protocol CoreDataProtocol {
-//    func save() -> [LostPets]
+    func load() -> [LostPet]
     func save(data: [LostPet])
 }
 
 
 class Data: CoreDataProtocol {
+    
+    enum AdvertKey {
+        case advertName
+        case descriptionName
+        case typePet
+        case oldPet
+        case lostAdress
+    }
+    
     func save(data: [LostPet]) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.newBackgroundContext()
@@ -25,6 +34,8 @@ class Data: CoreDataProtocol {
         guard let entity = entity else {
             return
         }
+
+        
         let taskObject = NSManagedObject(entity: entity, insertInto: context) as! Advert
         
         taskObject.advertName = data.first?.postName ?? ""
@@ -40,4 +51,24 @@ class Data: CoreDataProtocol {
         }
     }
     
+    func load() -> [LostPet] {
+        var dataAdvert: [LostPet] = []
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let fetchRequest: NSFetchRequest<Advert>
+        fetchRequest = Advert.fetchRequest()
+        let context = appDelegate.persistentContainer.viewContext
+        let objects = try! context.fetch(fetchRequest)
+        for i in 0..<objects.count {
+            guard let advertName = objects[i].advertName,
+                  let descriptionName = objects[i].descriptionName,
+                  let typePet = objects[i].typePet,
+                  let oldPet = objects[i].oldPet,
+                  let lostAdress = objects[i].lostAdress else {
+                continue
+            }
+            dataAdvert.append(LostPets(typePet: typePet, oldPet: oldPet, lostAdress: lostAdress, postName: advertName, descriptionName: descriptionName))
+        }
+        return dataAdvert
+    }
+
 }

@@ -66,10 +66,12 @@ class BulletinViewController: UIViewController {
     private var userDefaults = UserDefaults.standard
     private var storageKey = "profile"
     @IBOutlet weak var collectionView: UICollectionView!
+    private var user: Data?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = Data()
 //        bulletinView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
         if userDefaults.object(forKey: storageKey) == nil {
@@ -95,11 +97,8 @@ class BulletinViewController: UIViewController {
     }
     
     func addPets() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let fetchRequest: NSFetchRequest<Advert>
-        fetchRequest = Advert.fetchRequest()
-        let context = appDelegate.persistentContainer.viewContext
-        let objects = try! context.fetch(fetchRequest)
+        let objects: [LostPets] = user?.load() as! [LostPets]
+//        let objects = user?.load()
 //                do {
 //                    try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
 //                    try context.save()
@@ -108,10 +107,9 @@ class BulletinViewController: UIViewController {
 //                }
         //
         for advert in 0..<objects.count {
-            listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].advertName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
+            listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].postName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
         }
         collectionView.reloadData()
-        
     }
     
     
