@@ -64,9 +64,7 @@ class BulletinViewController: UIViewController {
     var delegate: BulletinViewControllerDeleagete?
     private var listAdvert: [LostPet] = []
     private var userDefaults = UserDefaults.standard
-    private var key: String = "listAdvert"
-    private var nameKey: String = "name"
-    private var numberKey: String = "number"
+    private var storageKey = "profile"
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -74,11 +72,8 @@ class BulletinViewController: UIViewController {
         super.viewDidLoad()
 //        bulletinView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
-        if userDefaults.object(forKey: nameKey) == nil {
-            userDefaults.set("Аноним", forKey: nameKey)
-        }
-        if userDefaults.object(forKey: numberKey) == nil {
-            userDefaults.set("Введите номер телефона", forKey: numberKey)
+        if userDefaults.object(forKey: storageKey) == nil {
+            userDefaults.set(["name": "Аноним", "number" : "Введите номер телефона"], forKey: storageKey)
         }
     }
     
