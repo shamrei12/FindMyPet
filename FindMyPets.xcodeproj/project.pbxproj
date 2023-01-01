@@ -30,6 +30,7 @@
 		D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */; };
 		D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */; };
 		D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */; };
+		D8CF61A42961E0CA004F843E /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CF61A32961E0CA004F843E /* TimeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
 		D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
 		D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AdvertData.xcdatamodel; sourceTree = "<group>"; };
+		D8CF61A32961E0CA004F843E /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D89C3346294F277200146974 /* FindMyPets */ = {
 			isa = PBXGroup;
 			children = (
+				D8CF61A22961E0B2004F843E /* TimeManager */,
 				D8CC7AE42956F1B900D24F03 /* Model */,
 				D8CC7ADC2955BF7600D24F03 /* Container */,
 				D82F9AF4295B570300439224 /* Profile */,
@@ -190,6 +193,14 @@
 			path = formCreateAdvert;
 			sourceTree = "<group>";
 		};
+		D8CF61A22961E0B2004F843E /* TimeManager */ = {
+			isa = PBXGroup;
+			children = (
+				D8CF61A32961E0CA004F843E /* TimeManager.swift */,
+			);
+			path = TimeManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +283,7 @@
 				D841E0F12960266100FF18F5 /* CoreDataModel.swift in Sources */,
 				D89C334A294F277200146974 /* SceneDelegate.swift in Sources */,
 				D8CC7AE62956F20E00D24F03 /* Lostpet.swift in Sources */,
+				D8CF61A42961E0CA004F843E /* TimeManager.swift in Sources */,
 				D8CC7ADE2955BF9900D24F03 /* ContainerViewController.swift in Sources */,
 				D89C335F294F297B00146974 /* BulletinViewController.swift in Sources */,
 				D89C3366294F2D4300146974 /* BulletinCollectionViewCell.swift in Sources */,

@@ -15,7 +15,8 @@ class AdvertViewController: UIViewController {
     @IBOutlet weak private var oldPet: UILabel!
     @IBOutlet weak private var typePet: UILabel!
     @IBOutlet weak private var lostAdress: UILabel!
-
+    @IBOutlet weak private var curentDate: UILabel!
+    
     private var user: UserDefaultsModel?
     
     @IBOutlet weak var username: UILabel!
@@ -37,7 +38,9 @@ class AdvertViewController: UIViewController {
         typePet.text = objects[index].typePet
         oldPet.text = objects[index].oldPet
         lostAdress.text = objects[index].lostAdress
+        curentDate.text = objects[index].date
         username.text = name
+        
     }
     
 

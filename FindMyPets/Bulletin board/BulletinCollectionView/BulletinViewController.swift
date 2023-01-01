@@ -67,16 +67,16 @@ class BulletinViewController: UIViewController {
     private var storageKey = "profile"
     @IBOutlet weak var collectionView: UICollectionView!
     private var user: Data?
+    private var profile: UserDefaultsModel?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user = Data()
+        profile = UserDefaultsModel()
 //        bulletinView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
+        profile?.load()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
-        if userDefaults.object(forKey: storageKey) == nil {
-            userDefaults.set(["name": "Аноним", "number" : "Введите номер телефона"], forKey: storageKey)
-        }
     }
     
     @objc func didTapScrollView() {
@@ -107,7 +107,7 @@ class BulletinViewController: UIViewController {
 //                }
         //
         for advert in 0..<objects.count {
-            listAdvert.append(LostPets(typePet: objects[advert].typePet ?? "", oldPet: objects[advert].oldPet ?? "", lostAdress: objects[advert].lostAdress ?? "", postName: objects[advert].postName ?? "", descriptionName: objects[advert].descriptionName ?? ""))
+            listAdvert.append(LostPets(postName: objects[advert].postName, descriptionName: objects[advert].descriptionName, typePet: objects[advert].typePet, oldPet: objects[advert].oldPet, lostAdress: objects[advert].lostAdress, curentDate: objects[advert].curentDate))
         }
         collectionView.reloadData()
     }
