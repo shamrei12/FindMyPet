@@ -14,12 +14,14 @@ protocol LostPet {
     var typePet: String { get set }
     var oldPet: String { get set }
     var lostAdress: String { get set }
+    var curentDate: String { get set }
 }
 
 struct LostPets: LostPet {
+    var postName: String
+    var descriptionName: String
     var typePet: String
     var oldPet: String
     var lostAdress: String
-    var postName: String
-    var descriptionName: String
+    var curentDate: String
 }

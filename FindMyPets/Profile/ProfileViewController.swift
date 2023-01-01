@@ -33,10 +33,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         numberLabel.borderStyle = .none
         nameLabel.isUserInteractionEnabled = false
         numberLabel.isUserInteractionEnabled = false
-        nameLabel.placeholder = profile?.first?.name ?? ""
-        numberLabel.placeholder = profile?.first?.number ?? ""
-
-
+        nameLabel.placeholder = profile?.first?.name
+        numberLabel.placeholder = profile?.first?.number
     }
     
     @IBAction func changeName(_ sender: UIButton) {

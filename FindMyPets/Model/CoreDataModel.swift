@@ -31,10 +31,11 @@ class Data: CoreDataProtocol {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.newBackgroundContext()
         let entity = NSEntityDescription.entity(forEntityName: "Advert", in: context)
+        
+        
         guard let entity = entity else {
             return
         }
-
         
         let taskObject = NSManagedObject(entity: entity, insertInto: context) as! Advert
         
@@ -43,6 +44,7 @@ class Data: CoreDataProtocol {
         taskObject.typePet = data.first?.typePet ?? ""
         taskObject.oldPet = data.first?.oldPet ?? ""
         taskObject.lostAdress = data.first?.lostAdress ?? ""
+        taskObject.date = TimeManager.shared.currentDate() ?? ""
         do {
             try context.save()
             print(true)
@@ -58,15 +60,21 @@ class Data: CoreDataProtocol {
         fetchRequest = Advert.fetchRequest()
         let context = appDelegate.persistentContainer.viewContext
         let objects = try! context.fetch(fetchRequest)
+//        do {
+//            try context.execute(NSBatchDeleteRequest(fetchRequest: NSFetchRequest(entityName: "Advert")))
+//          try context.save()
+//        } catch {
+//        }
         for i in 0..<objects.count {
             guard let advertName = objects[i].advertName,
                   let descriptionName = objects[i].descriptionName,
                   let typePet = objects[i].typePet,
                   let oldPet = objects[i].oldPet,
-                  let lostAdress = objects[i].lostAdress else {
+                  let lostAdress = objects[i].lostAdress,
+                  let date = objects[i].date else {
                 continue
             }
-            dataAdvert.append(LostPets(typePet: typePet, oldPet: oldPet, lostAdress: lostAdress, postName: advertName, descriptionName: descriptionName))
+            dataAdvert.append(LostPets(postName: advertName, descriptionName: descriptionName, typePet: typePet, oldPet: oldPet, lostAdress: lostAdress, curentDate: date))
         }
         return dataAdvert
     }

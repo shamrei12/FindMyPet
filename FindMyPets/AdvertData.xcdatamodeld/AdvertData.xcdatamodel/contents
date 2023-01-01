@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Advert" representedClassName="Advert" syncable="YES" codeGenerationType="class">
         <attribute name="advertName" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
         <attribute name="descriptionName" optional="YES" attributeType="String"/>
         <attribute name="lostAdress" optional="YES" attributeType="String"/>
         <attribute name="oldPet" optional="YES" attributeType="String"/>

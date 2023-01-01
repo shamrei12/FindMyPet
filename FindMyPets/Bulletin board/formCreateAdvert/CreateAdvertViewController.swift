@@ -51,6 +51,7 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         lostAdress.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
+        print(TimeManager.shared.currentDate())
     }
     
     @objc func editingBegan(_ textField: UITextField) {
@@ -79,12 +80,23 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
         dismiss(animated: true)
     }
     
+    func valdidAdvert() -> Bool {
+        if advertName.text?.count ?? 0 > 10 && descriptionName.text.count > 10 && (yoPet.titleLabel?.text != "Возраст" && typePet.titleLabel?.text != "Тип питомца") {
+            return true
+        } else {
+            return false
+        }
+    }
+
     
     @IBAction func createAdvert(_ sender: UIButton) {
-        var advert: [LostPet] = []
-        advert.append(LostPets(typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", postName: advertName.text ?? "", descriptionName: descriptionName.text ?? ""))
-        data?.save(data: advert)
-        dismiss(animated: true)
+        if valdidAdvert() {
+            var advert: [LostPet] = []
+//            advert.append(LostPets(typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", postName: advertName.text ?? "", descriptionName: descriptionName.text ?? ""))
+            advert.append(LostPets(postName: advertName.text ?? "", descriptionName: descriptionName.text ?? "", typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", curentDate: TimeManager.shared.currentDate()))
+            data?.save(data: advert)
+            dismiss(animated: true)
+        }
     }
     
     func choiceType() {

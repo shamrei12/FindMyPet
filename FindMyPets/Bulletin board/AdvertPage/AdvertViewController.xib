@@ -200,6 +200,7 @@
             <size key="freeformSize" width="414" height="1200"/>
             <connections>
                 <outlet property="advertName" destination="rGp-xe-5Jz" id="4w2-Fr-z9Q"/>
+                <outlet property="curentDate" destination="jmx-ok-IH9" id="65m-RM-NqB"/>
                 <outlet property="descriptoinName" destination="7mm-66-mPt" id="LPW-8u-CcJ"/>
                 <outlet property="lostAdress" destination="ESj-0E-vCa" id="lgo-Ul-BUV"/>
                 <outlet property="oldPet" destination="XZr-5B-9lQ" id="ePS-L4-Hep"/>
