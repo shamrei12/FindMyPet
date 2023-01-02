@@ -45,7 +45,6 @@ class Data: CoreDataProtocol {
         taskObject.oldPet = data.first?.oldPet ?? ""
         taskObject.lostAdress = data.first?.lostAdress ?? ""
         taskObject.date = TimeManager.shared.currentDate() ?? ""
-        taskObject.id = UUID()
         do {
             try context.save()
             print(true)
@@ -72,8 +71,7 @@ class Data: CoreDataProtocol {
                   let typePet = objects[i].typePet,
                   let oldPet = objects[i].oldPet,
                   let lostAdress = objects[i].lostAdress,
-                  let date = objects[i].date,
-                let id = objects[i].id  else {
+                  let date = objects[i].date else {
                 continue
             }
             dataAdvert.append(LostPets(postName: advertName, descriptionName: descriptionName, typePet: typePet, oldPet: oldPet, lostAdress: lostAdress, curentDate: date))

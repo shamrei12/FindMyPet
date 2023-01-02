@@ -35,9 +35,9 @@ class AdvertViewController: UIViewController {
         let objects = try! context.fetch(fetchRequest)
         advertName.text = objects[index].advertName
         descriptoinName.text = objects[index].descriptionName
-        typePet.text = objects[index].typePet
-        oldPet.text = objects[index].oldPet
-        lostAdress.text = objects[index].lostAdress
+        typePet.text = "Тип питомца: \(objects[index].typePet ?? "")"
+        oldPet.text = "Возраст питомца: \(objects[index].oldPet ?? "")"
+        lostAdress.text = "Адрес пропажи: \(objects[index].lostAdress ?? "" )"
         curentDate.text = objects[index].date
         username.text = name
         numberAdvert.text = "№ \(index + 1)"
