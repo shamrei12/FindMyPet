@@ -58,16 +58,16 @@
                 <viewLayoutGuide key="safeArea" id="vEm-yf-fR5"/>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="3ZH-TQ-mlI"/>
-                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="top" secondItem="eb5-Ba-TGE" secondAttribute="bottom" id="GUa-RK-EDc"/>
-                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="Mfp-4H-Ue3"/>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="QiJ-sR-JGE"/>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="top" secondItem="qpM-xd-9Aa" secondAttribute="bottom" id="ULZ-k8-awv"/>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="bottom" secondItem="vEm-yf-fR5" secondAttribute="bottom" id="WLd-hJ-iit"/>
-                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="YG3-Qz-pAk"/>
-                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="top" secondItem="vEm-yf-fR5" secondAttribute="top" id="qRq-I8-R6p"/>
-                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="qoE-6U-LcA"/>
-                    <constraint firstItem="aNP-JE-aTc" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="reI-Xv-rTl"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="top" secondItem="qpM-xd-9Aa" secondAttribute="bottom" id="2DK-5R-nUU"/>
+                    <constraint firstItem="vEm-yf-fR5" firstAttribute="bottom" secondItem="aNP-JE-aTc" secondAttribute="bottom" id="GhB-Ph-jj5"/>
+                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="LMF-lV-oq4"/>
+                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="OnR-2a-m3V"/>
+                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="top" secondItem="eb5-Ba-TGE" secondAttribute="bottom" id="RWs-Cs-6np"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="ZaU-Jn-uzw"/>
+                    <constraint firstItem="eb5-Ba-TGE" firstAttribute="top" secondItem="vEm-yf-fR5" secondAttribute="top" id="c0C-gf-5ps"/>
+                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="nGk-X4-DyR"/>
+                    <constraint firstItem="aNP-JE-aTc" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="oQb-7i-9Ln"/>
+                    <constraint firstItem="qpM-xd-9Aa" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="yK9-VN-tOa"/>
                 </constraints>
             </view>
             <connections>

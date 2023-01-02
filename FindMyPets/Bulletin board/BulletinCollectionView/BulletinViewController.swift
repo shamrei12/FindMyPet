@@ -68,6 +68,7 @@ class BulletinViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     private var user: Data?
     private var profile: UserDefaultsModel?
+    @IBOutlet weak var switchBulletin: UISegmentedControl!
     
     
     override func viewDidLoad() {

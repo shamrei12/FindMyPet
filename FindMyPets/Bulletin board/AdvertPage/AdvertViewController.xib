@@ -203,6 +203,7 @@
                 <outlet property="curentDate" destination="jmx-ok-IH9" id="65m-RM-NqB"/>
                 <outlet property="descriptoinName" destination="7mm-66-mPt" id="LPW-8u-CcJ"/>
                 <outlet property="lostAdress" destination="ESj-0E-vCa" id="lgo-Ul-BUV"/>
+                <outlet property="numberAdvert" destination="wmd-fL-px2" id="Oge-rA-6AE"/>
                 <outlet property="oldPet" destination="XZr-5B-9lQ" id="ePS-L4-Hep"/>
                 <outlet property="typePet" destination="U8E-ud-4To" id="v8O-Rg-nLX"/>
                 <outlet property="username" destination="yKH-xy-1nP" id="aBw-hW-VhI"/>
