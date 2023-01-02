@@ -22,7 +22,6 @@ class MenuViewController: UIViewController {
 
         @objc func didTapScrollView() {
             container.hideMenu()
-            print(1)
         }
     
     @IBAction func profileTapped(_ sender: UIButton) {
