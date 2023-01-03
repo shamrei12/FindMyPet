@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <items>
                             <navigationItem title="Профиль" id="PYA-wA-6cM">
-                                <barButtonItem key="leftBarButtonItem" title="На главную" id="RIF-AY-Vk8">
+                                <barButtonItem key="leftBarButtonItem" image="arrowshape.backward" catalog="system" id="RIF-AY-Vk8">
                                     <connections>
                                         <action selector="backtapped:" destination="x52-vY-ZQT" id="rzj-np-xcZ"/>
                                     </connections>
@@ -101,6 +101,7 @@
         </viewController>
     </objects>
     <resources>
+        <image name="arrowshape.backward" catalog="system" width="128" height="104"/>
         <image name="user" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

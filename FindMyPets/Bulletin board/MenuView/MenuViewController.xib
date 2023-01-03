@@ -38,6 +38,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icons8-mail-24()" title="Сообщения" imagePadding="5"/>
+                                <connections>
+                                    <action selector="messageTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="PJG-Oi-Mu9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxc-YU-CGb">
                                 <rect key="frame" x="0.0" y="126" width="160.33333333333334" height="38"/>

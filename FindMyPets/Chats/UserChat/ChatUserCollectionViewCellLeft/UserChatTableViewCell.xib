@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserChatTableViewCell" rowHeight="97" id="KGk-i7-Jjw" customClass="UserChatTableViewCell" customModule="FindMyPets" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oel-93-0Hb">
+                        <rect key="frame" x="20" y="5" width="252" height="89"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваша собака у нас! Бабки на стол или будет хуже! &lt;KF&lt;FKF&lt;FKFFJO{PSOHDASODBASIUPDB PSA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61b-GY-nB2">
+                                <rect key="frame" x="10" y="5" width="237" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="61b-GY-nB2" secondAttribute="bottom" constant="5" id="U3y-dK-rWa"/>
+                            <constraint firstAttribute="trailing" secondItem="61b-GY-nB2" secondAttribute="trailing" constant="5" id="fG3-iK-Amm"/>
+                            <constraint firstItem="61b-GY-nB2" firstAttribute="top" secondItem="oel-93-0Hb" secondAttribute="top" constant="5" id="lGD-Gg-CrC"/>
+                            <constraint firstItem="61b-GY-nB2" firstAttribute="leading" secondItem="oel-93-0Hb" secondAttribute="leading" constant="10" id="nAY-6e-vEe"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCG-QH-YPD">
+                        <rect key="frame" x="0.0" y="94" width="332" height="3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="Tgb-qC-dJW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lCG-QH-YPD" firstAttribute="top" secondItem="oel-93-0Hb" secondAttribute="bottom" id="1eX-Gs-JTh"/>
+                    <constraint firstAttribute="bottom" secondItem="lCG-QH-YPD" secondAttribute="bottom" id="Dh5-0F-OFv"/>
+                    <constraint firstAttribute="trailing" secondItem="oel-93-0Hb" secondAttribute="trailing" constant="60" id="HG5-vZ-e3G"/>
+                    <constraint firstItem="lCG-QH-YPD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OCu-St-znW"/>
+                    <constraint firstItem="oel-93-0Hb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="YEo-zZ-svt"/>
+                    <constraint firstAttribute="trailing" secondItem="lCG-QH-YPD" secondAttribute="trailing" id="bp9-1j-9GJ"/>
+                    <constraint firstItem="oel-93-0Hb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qpM-s7-H8w"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="65.648854961832058" y="38.380281690140848"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -12,6 +12,16 @@
 		D841E0EB295EF3EB00FF18F5 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841E0EA295EF3EB00FF18F5 /* ProfileModel.swift */; };
 		D841E0ED295EF4F700FF18F5 /* UserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841E0EC295EF4F700FF18F5 /* UserDefaultsModel.swift */; };
 		D841E0F12960266100FF18F5 /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841E0F02960266100FF18F5 /* CoreDataModel.swift */; };
+		D8441C9E296460D30083A993 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8441C9C296460D30083A993 /* ChatTableViewCell.swift */; };
+		D8441C9F296460D30083A993 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8441C9D296460D30083A993 /* ChatTableViewCell.xib */; };
+		D8441CAB2964883B0083A993 /* UserChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8441CA92964883B0083A993 /* UserChatViewController.swift */; };
+		D8441CAC2964883B0083A993 /* UserChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8441CAA2964883B0083A993 /* UserChatViewController.xib */; };
+		D8441CB529649F550083A993 /* UserChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8441CB329649F550083A993 /* UserChatTableViewCell.swift */; };
+		D8441CB629649F550083A993 /* UserChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8441CB429649F550083A993 /* UserChatTableViewCell.xib */; };
+		D8441CBA2964AB330083A993 /* ChatUserRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8441CB82964AB330083A993 /* ChatUserRightTableViewCell.swift */; };
+		D8441CBB2964AB330083A993 /* ChatUserRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8441CB92964AB330083A993 /* ChatUserRightTableViewCell.xib */; };
+		D8525A672964604A00E97BC5 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8525A652964604A00E97BC5 /* ChatsViewController.swift */; };
+		D8525A682964604A00E97BC5 /* ChatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8525A662964604A00E97BC5 /* ChatsViewController.xib */; };
 		D89C3348294F277200146974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C3347294F277200146974 /* AppDelegate.swift */; };
 		D89C334A294F277200146974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89C3349294F277200146974 /* SceneDelegate.swift */; };
 		D89C3351294F277300146974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89C3350294F277300146974 /* Assets.xcassets */; };
@@ -39,6 +49,16 @@
 		D841E0EA295EF3EB00FF18F5 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		D841E0EC295EF4F700FF18F5 /* UserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
 		D841E0F02960266100FF18F5 /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
+		D8441C9C296460D30083A993 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		D8441C9D296460D30083A993 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		D8441CA92964883B0083A993 /* UserChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatViewController.swift; sourceTree = "<group>"; };
+		D8441CAA2964883B0083A993 /* UserChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatViewController.xib; sourceTree = "<group>"; };
+		D8441CB329649F550083A993 /* UserChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatTableViewCell.swift; sourceTree = "<group>"; };
+		D8441CB429649F550083A993 /* UserChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatTableViewCell.xib; sourceTree = "<group>"; };
+		D8441CB82964AB330083A993 /* ChatUserRightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUserRightTableViewCell.swift; sourceTree = "<group>"; };
+		D8441CB92964AB330083A993 /* ChatUserRightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatUserRightTableViewCell.xib; sourceTree = "<group>"; };
+		D8525A652964604A00E97BC5 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		D8525A662964604A00E97BC5 /* ChatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsViewController.xib; sourceTree = "<group>"; };
 		D89C3344294F277200146974 /* FindMyPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89C3347294F277200146974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D89C3349294F277200146974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +102,55 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		D8441CA82964882B0083A993 /* UserChat */ = {
+			isa = PBXGroup;
+			children = (
+				D8441CB72964AAAB0083A993 /* ChatUserCollectionViewCellRight */,
+				D8441CAE29648BC20083A993 /* ChatUserCollectionViewCellLeft */,
+				D8441CA92964883B0083A993 /* UserChatViewController.swift */,
+				D8441CAA2964883B0083A993 /* UserChatViewController.xib */,
+			);
+			path = UserChat;
+			sourceTree = "<group>";
+		};
+		D8441CAE29648BC20083A993 /* ChatUserCollectionViewCellLeft */ = {
+			isa = PBXGroup;
+			children = (
+				D8441CB329649F550083A993 /* UserChatTableViewCell.swift */,
+				D8441CB429649F550083A993 /* UserChatTableViewCell.xib */,
+			);
+			path = ChatUserCollectionViewCellLeft;
+			sourceTree = "<group>";
+		};
+		D8441CB72964AAAB0083A993 /* ChatUserCollectionViewCellRight */ = {
+			isa = PBXGroup;
+			children = (
+				D8441CB82964AB330083A993 /* ChatUserRightTableViewCell.swift */,
+				D8441CB92964AB330083A993 /* ChatUserRightTableViewCell.xib */,
+			);
+			path = ChatUserCollectionViewCellRight;
+			sourceTree = "<group>";
+		};
+		D8525A642964602200E97BC5 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				D8525A6D2964607000E97BC5 /* ChatTableViewCell */,
+				D8441CA82964882B0083A993 /* UserChat */,
+				D8525A652964604A00E97BC5 /* ChatsViewController.swift */,
+				D8525A662964604A00E97BC5 /* ChatsViewController.xib */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		D8525A6D2964607000E97BC5 /* ChatTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8441C9C296460D30083A993 /* ChatTableViewCell.swift */,
+				D8441C9D296460D30083A993 /* ChatTableViewCell.xib */,
+			);
+			path = ChatTableViewCell;
+			sourceTree = "<group>";
+		};
 		D89C333B294F277200146974 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +170,7 @@
 		D89C3346294F277200146974 /* FindMyPets */ = {
 			isa = PBXGroup;
 			children = (
+				D8525A642964602200E97BC5 /* Chats */,
 				D8CF61A22961E0B2004F843E /* TimeManager */,
 				D8CC7AE42956F1B900D24F03 /* Model */,
 				D8CC7ADC2955BF7600D24F03 /* Container */,
@@ -259,13 +329,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8525A682964604A00E97BC5 /* ChatsViewController.xib in Resources */,
 				D89C336C2950EE0300146974 /* AdvertViewController.xib in Resources */,
 				D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */,
 				D82F9AF3295B56BA00439224 /* ProfileViewController.xib in Resources */,
+				D8441CB629649F550083A993 /* UserChatTableViewCell.xib in Resources */,
+				D8441CAC2964883B0083A993 /* UserChatViewController.xib in Resources */,
 				D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */,
 				D89C3360294F297B00146974 /* BulletinViewController.xib in Resources */,
 				D89C3367294F2D4300146974 /* BulletinCollectionViewCell.xib in Resources */,
+				D8441C9F296460D30083A993 /* ChatTableViewCell.xib in Resources */,
 				D89C3354294F277300146974 /* LaunchScreen.storyboard in Resources */,
+				D8441CBB2964AB330083A993 /* ChatUserRightTableViewCell.xib in Resources */,
 				D89C3351294F277300146974 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,17 +355,22 @@
 				D841E0ED295EF4F700FF18F5 /* UserDefaultsModel.swift in Sources */,
 				D841E0EB295EF3EB00FF18F5 /* ProfileModel.swift in Sources */,
 				D89C3348294F277200146974 /* AppDelegate.swift in Sources */,
+				D8441C9E296460D30083A993 /* ChatTableViewCell.swift in Sources */,
 				D841E0F12960266100FF18F5 /* CoreDataModel.swift in Sources */,
 				D89C334A294F277200146974 /* SceneDelegate.swift in Sources */,
 				D8CC7AE62956F20E00D24F03 /* Lostpet.swift in Sources */,
 				D8CF61A42961E0CA004F843E /* TimeManager.swift in Sources */,
 				D8CC7ADE2955BF9900D24F03 /* ContainerViewController.swift in Sources */,
 				D89C335F294F297B00146974 /* BulletinViewController.swift in Sources */,
+				D8525A672964604A00E97BC5 /* ChatsViewController.swift in Sources */,
+				D8441CAB2964883B0083A993 /* UserChatViewController.swift in Sources */,
 				D89C3366294F2D4300146974 /* BulletinCollectionViewCell.swift in Sources */,
 				D82F9AF2295B56BA00439224 /* ProfileViewController.swift in Sources */,
 				D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */,
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
+				D8441CB529649F550083A993 /* UserChatTableViewCell.swift in Sources */,
 				D89C3362294F2A1300146974 /* Extension.swift in Sources */,
+				D8441CBA2964AB330083A993 /* ChatUserRightTableViewCell.swift in Sources */,
 				D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */,
 				D8CC7AE22955EB8D00D24F03 /* MenuViewController.swift in Sources */,
 			);

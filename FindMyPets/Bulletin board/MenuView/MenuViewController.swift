@@ -24,6 +24,15 @@ class MenuViewController: UIViewController {
             container.hideMenu()
         }
     
+    
+    
+    @IBAction func messageTapped(_ sender: UIButton) {
+        let message = ChatsViewController.instantiate()
+        message.modalPresentationStyle = .fullScreen
+        present(message, animated: true)
+    }
+    
+    
     @IBAction func profileTapped(_ sender: UIButton) {
         let profile = ProfileViewController.instantiate()
         profile.modalPresentationStyle = .fullScreen
