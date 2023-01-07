@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="FindMyPets" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="crP-y9-UDQ" customClass="SettingViewController" customModule="FindMyPets" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="Isn-AA-KOj">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6DJ-EP-qxD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <items>
+                            <navigationItem title="Настройки" id="DEw-5c-YGx">
+                                <barButtonItem key="leftBarButtonItem" image="arrowshape.backward" catalog="system" id="qdw-yG-M5u">
+                                    <connections>
+                                        <action selector="backTapped:" destination="crP-y9-UDQ" id="H0e-9s-fTk"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVQ-PE-4ny">
+                        <rect key="frame" x="10" y="123" width="333" height="31"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тема:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59g-SP-FBX">
+                                <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81.333333333333329" id="UVD-zq-QmN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dXe-DX-aAb">
+                                <rect key="frame" x="81.333333333333329" y="0.0" width="251.66666666666669" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Светлая" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-rv-XTR">
+                                        <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-5Y-1P7">
+                                        <rect key="frame" x="110.66666666666669" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changedTheme:" destination="crP-y9-UDQ" eventType="valueChanged" id="SD2-eH-5z9"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Темная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt5-aF-rYA">
+                                        <rect key="frame" x="189.66666666666669" y="0.0" width="62" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="3nf-da-F8G"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="6DJ-EP-qxD" firstAttribute="leading" secondItem="3nf-da-F8G" secondAttribute="leading" id="0kg-0C-vdx"/>
+                    <constraint firstItem="QVQ-PE-4ny" firstAttribute="leading" secondItem="3nf-da-F8G" secondAttribute="leading" constant="10" id="2Su-VD-LTc"/>
+                    <constraint firstItem="6DJ-EP-qxD" firstAttribute="trailing" secondItem="3nf-da-F8G" secondAttribute="trailing" id="PsT-2Z-AuJ"/>
+                    <constraint firstItem="6DJ-EP-qxD" firstAttribute="top" secondItem="3nf-da-F8G" secondAttribute="top" id="faN-JI-MSp"/>
+                    <constraint firstItem="3nf-da-F8G" firstAttribute="trailing" secondItem="QVQ-PE-4ny" secondAttribute="trailing" constant="50" id="mYd-v5-Oi8"/>
+                    <constraint firstItem="QVQ-PE-4ny" firstAttribute="top" secondItem="6DJ-EP-qxD" secondAttribute="bottom" constant="20" id="poD-QE-lSM"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="darkTheme" destination="Zt5-aF-rYA" id="3jM-rz-Scc"/>
+                <outlet property="lightTheme" destination="oYc-rv-XTR" id="4Vx-iE-3ty"/>
+                <outlet property="mainView" destination="Isn-AA-KOj" id="IWA-Kz-DbN"/>
+                <outlet property="navBar" destination="6DJ-EP-qxD" id="S12-75-tgk"/>
+                <outlet property="swithTheme" destination="7yY-5Y-1P7" id="7Xl-gq-8RI"/>
+                <outlet property="themeLablel" destination="59g-SP-FBX" id="fIF-d3-7Ag"/>
+            </connections>
+            <point key="canvasLocation" x="-61" y="11"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="arrowshape.backward" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

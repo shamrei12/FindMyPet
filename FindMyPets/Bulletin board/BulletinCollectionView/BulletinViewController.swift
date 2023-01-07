@@ -51,52 +51,94 @@ extension BulletinViewController: UICollectionViewDataSource {
     }
 }
 
+protocol MenuViewControllerDelegate {
+    func visible()
+    func hide()
+}
+
+
 protocol  BulletinViewControllerDeleagete {
     func toogleMenu()
+    func swipeRight()
+    func swipeLeft()
 }
 
 class BulletinViewController: UIViewController {
     
+    @IBOutlet weak var createAdvert: UIBarButtonItem!
     @IBOutlet weak private var bulletinView: UIView!
     @IBOutlet weak private var menuTapped: UIBarButtonItem!
     private var visibleMenu: Bool = true
     private var menuImage = false
     var delegate: BulletinViewControllerDeleagete?
+    var menuDelegate: MenuViewControllerDelegate?
     private var listAdvert: [LostPet] = []
     private var userDefaults = UserDefaults.standard
     private var storageKey = "profile"
     @IBOutlet weak var collectionView: UICollectionView!
     private var user: Data?
-    private var profile: UserDefaultsModel?
-    @IBOutlet weak var switchBulletin: UISegmentedControl!
+    private var profile: UserDefaultsModel!
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var searchBar: UISearchBar!
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user = Data()
         profile = UserDefaultsModel()
-//        bulletinView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
+//      bulletinView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
         profile?.load()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
     }
     
-    @objc func didTapScrollView() {
-        if menuImage {
-            menuTapped.image = UIImage(named: "menu_1.png")
-            menuImage = false
-        }
-        if !visibleMenu {
-            visibleMenu = true
-            hideMenu()
-        }
+//    
+//    @objc func didTapScrollView() {
+//        if menuImage {
+//            menuTapped.image = UIImage(named: "menu_1.png")
+//            menuImage = false
+//        }
+//        if !visibleMenu {
+//            visibleMenu = true
+//            hideMenu()
+//        }
+//    }
+    
+
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        delegate?.swipeRight()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         listAdvert = []
         addPets()
+        updateUI()
     }
     
+    func updateUI() {
+        if profile.showTheme() {
+            navBar.tintColor = UIColor.white
+            navBar.barTintColor = UIColor.black
+            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            collectionView.layer.backgroundColor = UIColor.black.cgColor
+            bulletinView.backgroundColor = UIColor.black
+            createAdvert.tintColor = UIColor.white
+            menuTapped.setBackgroundImage(UIImage(named: "menu_2.png"), for: .normal, barMetrics: .default)
+            searchBar.barStyle = .black
+            
+        
+        } else {
+            navBar.tintColor = UIColor.black
+            navBar.barTintColor = UIColor.white
+            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            collectionView.layer.backgroundColor = UIColor.white.cgColor
+            bulletinView.backgroundColor = UIColor.white
+            createAdvert.tintColor = UIColor.black
+            menuTapped.setBackgroundImage(UIImage(named: "menu_1.png"), for: .normal, barMetrics: .default)
+            searchBar.barStyle = .default
+        }
+    }
     func addPets() {
         let objects: [LostPets] = user?.load() as! [LostPets]
 //        let objects = user?.load()
@@ -121,24 +163,18 @@ class BulletinViewController: UIViewController {
         present(countryVC, animated: true)
     }
     
+
     
     func hideMenu() {
         delegate?.toogleMenu()
+        
+    }
+    
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        delegate?.swipeLeft()
     }
     
     @IBAction func menuTapped(_ sender: UIBarButtonItem) {
-        if !menuImage {
-            menuImage = true
-            menuTapped.image = UIImage(named: "menu_2.png")
-        } else {
-            menuImage = false
-            menuTapped.image = UIImage(named: "menu_1.png")
-        }
-        if !visibleMenu {
-            visibleMenu = true
-        } else {
-            visibleMenu = false
-        }
         hideMenu()
     }
 }

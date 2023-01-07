@@ -41,6 +41,9 @@
 		D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */; };
 		D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */; };
 		D8CF61A42961E0CA004F843E /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CF61A32961E0CA004F843E /* TimeManager.swift */; };
+		D8EFFA972965E0EB009C6210 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFFA962965E0EB009C6210 /* MessagesModel.swift */; };
+		D8EFFA9B29684FFD009C6210 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFFA9929684FFD009C6210 /* SettingViewController.swift */; };
+		D8EFFA9C29684FFD009C6210 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
 		D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AdvertData.xcdatamodel; sourceTree = "<group>"; };
 		D8CF61A32961E0CA004F843E /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		D8EFFA962965E0EB009C6210 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
+		D8EFFA9929684FFD009C6210 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,7 @@
 		D89C3346294F277200146974 /* FindMyPets */ = {
 			isa = PBXGroup;
 			children = (
+				D8EFFA9829684FD6009C6210 /* SettingView */,
 				D8525A642964602200E97BC5 /* Chats */,
 				D8CF61A22961E0B2004F843E /* TimeManager */,
 				D8CC7AE42956F1B900D24F03 /* Model */,
@@ -250,6 +257,7 @@
 				D841E0EA295EF3EB00FF18F5 /* ProfileModel.swift */,
 				D841E0EC295EF4F700FF18F5 /* UserDefaultsModel.swift */,
 				D841E0F02960266100FF18F5 /* CoreDataModel.swift */,
+				D8EFFA962965E0EB009C6210 /* MessagesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +277,15 @@
 				D8CF61A32961E0CA004F843E /* TimeManager.swift */,
 			);
 			path = TimeManager;
+			sourceTree = "<group>";
+		};
+		D8EFFA9829684FD6009C6210 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				D8EFFA9929684FFD009C6210 /* SettingViewController.swift */,
+				D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */,
+			);
+			path = SettingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +353,7 @@
 				D8441CB629649F550083A993 /* UserChatTableViewCell.xib in Resources */,
 				D8441CAC2964883B0083A993 /* UserChatViewController.xib in Resources */,
 				D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */,
+				D8EFFA9C29684FFD009C6210 /* SettingViewController.xib in Resources */,
 				D89C3360294F297B00146974 /* BulletinViewController.xib in Resources */,
 				D89C3367294F2D4300146974 /* BulletinCollectionViewCell.xib in Resources */,
 				D8441C9F296460D30083A993 /* ChatTableViewCell.xib in Resources */,
@@ -367,8 +385,10 @@
 				D89C3366294F2D4300146974 /* BulletinCollectionViewCell.swift in Sources */,
 				D82F9AF2295B56BA00439224 /* ProfileViewController.swift in Sources */,
 				D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */,
+				D8EFFA972965E0EB009C6210 /* MessagesModel.swift in Sources */,
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
 				D8441CB529649F550083A993 /* UserChatTableViewCell.swift in Sources */,
+				D8EFFA9B29684FFD009C6210 /* SettingViewController.swift in Sources */,
 				D89C3362294F2A1300146974 /* Extension.swift in Sources */,
 				D8441CBA2964AB330083A993 /* ChatUserRightTableViewCell.swift in Sources */,
 				D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */,

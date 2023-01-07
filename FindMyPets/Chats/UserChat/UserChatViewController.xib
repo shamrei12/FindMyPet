@@ -27,23 +27,26 @@
                             </navigationItem>
                         </items>
                     </navigationBar>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="g2v-Nz-nep">
-                        <rect key="frame" x="0.0" y="783.66666666666663" width="393" height="34.333333333333371"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g2v-Nz-nep">
+                        <rect key="frame" x="10" y="783.66666666666663" width="373" height="34.333333333333371"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UlX-zZ-5tL">
-                                <rect key="frame" x="0.0" y="0.33333333333337123" width="340.66666666666669" height="34"/>
+                                <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="34.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3y-02-Duy">
-                                <rect key="frame" x="340.66666666666669" y="0.0" width="52.333333333333314" height="34.333333333333336"/>
+                                <rect key="frame" x="320.66666666666669" y="0.0" width="52.333333333333314" height="34.333333333333336"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.up.message.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="sendMessageTapped:" destination="sC7-qt-kfg" eventType="touchUpInside" id="nne-DK-6cF"/>
+                                </connections>
                             </button>
                         </subviews>
                     </stackView>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WGg-h1-cmj">
-                        <rect key="frame" x="0.0" y="113" width="393" height="670.66666666666663"/>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WGg-h1-cmj">
+                        <rect key="frame" x="0.0" y="103" width="393" height="675.66666666666663"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="sC7-qt-kfg" id="3Uh-tf-AHf"/>
@@ -54,20 +57,22 @@
                 <viewLayoutGuide key="safeArea" id="kcr-Qc-SIv"/>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
-                    <constraint firstItem="5q8-Zr-1yO" firstAttribute="leading" secondItem="kcr-Qc-SIv" secondAttribute="leading" id="4Ot-pC-WtN"/>
-                    <constraint firstAttribute="trailing" secondItem="g2v-Nz-nep" secondAttribute="trailing" id="6zc-kr-tEr"/>
-                    <constraint firstItem="WGg-h1-cmj" firstAttribute="top" secondItem="5q8-Zr-1yO" secondAttribute="bottom" constant="10" id="9ma-J1-PlA"/>
-                    <constraint firstItem="WGg-h1-cmj" firstAttribute="leading" secondItem="kcr-Qc-SIv" secondAttribute="leading" id="BxR-bj-LiM"/>
-                    <constraint firstItem="5q8-Zr-1yO" firstAttribute="top" secondItem="kcr-Qc-SIv" secondAttribute="top" id="PTo-3T-WTU"/>
-                    <constraint firstItem="g2v-Nz-nep" firstAttribute="leading" secondItem="Yc8-wS-d0n" secondAttribute="leading" id="UAe-rz-yzi"/>
-                    <constraint firstItem="g2v-Nz-nep" firstAttribute="top" secondItem="WGg-h1-cmj" secondAttribute="bottom" id="cYp-gm-IUq"/>
-                    <constraint firstItem="kcr-Qc-SIv" firstAttribute="trailing" secondItem="WGg-h1-cmj" secondAttribute="trailing" id="jP4-XL-SNU"/>
-                    <constraint firstItem="5q8-Zr-1yO" firstAttribute="trailing" secondItem="kcr-Qc-SIv" secondAttribute="trailing" id="qgQ-mh-Uau"/>
-                    <constraint firstItem="kcr-Qc-SIv" firstAttribute="bottom" secondItem="g2v-Nz-nep" secondAttribute="bottom" id="u9b-5u-4F4"/>
+                    <constraint firstItem="kcr-Qc-SIv" firstAttribute="bottom" secondItem="g2v-Nz-nep" secondAttribute="bottom" id="64H-vZ-a3N"/>
+                    <constraint firstItem="g2v-Nz-nep" firstAttribute="top" secondItem="WGg-h1-cmj" secondAttribute="bottom" constant="5" id="8Yr-tC-FUW"/>
+                    <constraint firstItem="5q8-Zr-1yO" firstAttribute="trailing" secondItem="kcr-Qc-SIv" secondAttribute="trailing" id="bxQ-Ov-BKg"/>
+                    <constraint firstAttribute="trailing" secondItem="g2v-Nz-nep" secondAttribute="trailing" constant="10" id="eJd-VN-GFx"/>
+                    <constraint firstItem="WGg-h1-cmj" firstAttribute="trailing" secondItem="kcr-Qc-SIv" secondAttribute="trailing" id="hD4-MM-2rN"/>
+                    <constraint firstItem="WGg-h1-cmj" firstAttribute="leading" secondItem="kcr-Qc-SIv" secondAttribute="leading" id="iZb-QR-anU"/>
+                    <constraint firstItem="g2v-Nz-nep" firstAttribute="leading" secondItem="Yc8-wS-d0n" secondAttribute="leading" constant="10" id="sdQ-cA-muI"/>
+                    <constraint firstItem="5q8-Zr-1yO" firstAttribute="leading" secondItem="kcr-Qc-SIv" secondAttribute="leading" id="vFw-t1-52l"/>
+                    <constraint firstItem="5q8-Zr-1yO" firstAttribute="top" secondItem="kcr-Qc-SIv" secondAttribute="top" id="yb6-6z-2g3"/>
+                    <constraint firstItem="WGg-h1-cmj" firstAttribute="top" secondItem="5q8-Zr-1yO" secondAttribute="bottom" id="yuE-ps-R9N"/>
                 </constraints>
             </view>
             <connections>
+                <outlet property="sendMessageButton" destination="K3y-02-Duy" id="VNi-kJ-3Y9"/>
                 <outlet property="tableviewChat" destination="WGg-h1-cmj" id="HVj-1s-7ae"/>
+                <outlet property="textMessage" destination="UlX-zZ-5tL" id="2Nb-xm-Gxv"/>
             </connections>
             <point key="canvasLocation" x="232.82442748091603" y="52.816901408450704"/>
         </viewController>

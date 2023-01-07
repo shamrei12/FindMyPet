@@ -21,55 +21,63 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ohK-fN-p1l">
-                        <rect key="frame" x="10" y="139" width="183" height="227"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBp-bc-46Q">
-                                <rect key="frame" x="0.0" y="0.0" width="125" height="38"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icons8-account-24()" title="Профиль" imagePadding="5"/>
-                                <connections>
-                                    <action selector="profileTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="R5e-HM-sEp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-QN-Lj4">
-                                <rect key="frame" x="0.0" y="63" width="146" height="38"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icons8-mail-24()" title="Сообщения" imagePadding="5"/>
-                                <connections>
-                                    <action selector="messageTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="PJG-Oi-Mu9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxc-YU-CGb">
-                                <rect key="frame" x="0.0" y="126" width="160.33333333333334" height="38"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icons8-doorbell-24()" title="Уведомления" imagePadding="5"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-zJ-wtC">
-                                <rect key="frame" x="0.0" y="189" width="140" height="38"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icons8-settings-24()" title="Настройки" imagePadding="5"/>
-                            </button>
-                        </subviews>
-                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBp-bc-46Q">
+                        <rect key="frame" x="10" y="139" width="125" height="38"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icons8-account-24()" title="Профиль" imagePadding="5"/>
+                        <connections>
+                            <action selector="profileTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="R5e-HM-sEp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr2-QN-Lj4">
+                        <rect key="frame" x="10" y="197" width="146" height="38"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icons8-mail-24()" title="Сообщения" imagePadding="5"/>
+                        <connections>
+                            <action selector="messageTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="PJG-Oi-Mu9"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxc-YU-CGb">
+                        <rect key="frame" x="10" y="255" width="160.33333333333334" height="38"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icons8-doorbell-24()" title="Уведомления" imagePadding="5"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmD-zJ-wtC">
+                        <rect key="frame" x="10" y="313" width="140" height="38"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icons8-settings-24()" title="Настройки" imagePadding="5"/>
+                        <connections>
+                            <action selector="SettingTapped:" destination="G9a-fY-KI6" eventType="touchUpInside" id="1GY-yI-uGc"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="g8h-IC-jsJ"/>
                 <color key="backgroundColor" systemColor="systemPinkColor"/>
+                <gestureRecognizers/>
                 <constraints>
-                    <constraint firstItem="g8h-IC-jsJ" firstAttribute="trailing" secondItem="ohK-fN-p1l" secondAttribute="trailing" constant="200" id="DTj-Zk-jug"/>
+                    <constraint firstItem="zBp-bc-46Q" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="10" id="6lw-UX-CFM"/>
                     <constraint firstItem="JPb-lG-Ycd" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="10" id="Ec4-rE-2FX"/>
+                    <constraint firstItem="Jxc-YU-CGb" firstAttribute="top" secondItem="xr2-QN-Lj4" secondAttribute="bottom" constant="20" id="FBJ-y0-jpD"/>
+                    <constraint firstItem="NmD-zJ-wtC" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="10" id="FPD-sE-zFs"/>
+                    <constraint firstItem="xr2-QN-Lj4" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="10" id="JTE-wY-dDl"/>
                     <constraint firstItem="g8h-IC-jsJ" firstAttribute="trailing" secondItem="JPb-lG-Ycd" secondAttribute="trailing" constant="10" id="YEJ-Cr-TzY"/>
-                    <constraint firstItem="ohK-fN-p1l" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="10" id="ZMQ-6y-JnW"/>
+                    <constraint firstItem="xr2-QN-Lj4" firstAttribute="top" secondItem="zBp-bc-46Q" secondAttribute="bottom" constant="20" id="e82-vS-yta"/>
+                    <constraint firstItem="NmD-zJ-wtC" firstAttribute="top" secondItem="Jxc-YU-CGb" secondAttribute="bottom" constant="20" id="h6d-5v-Xrx"/>
                     <constraint firstItem="JPb-lG-Ycd" firstAttribute="top" secondItem="g8h-IC-jsJ" secondAttribute="top" id="jU8-BR-eb3"/>
-                    <constraint firstItem="ohK-fN-p1l" firstAttribute="top" secondItem="JPb-lG-Ycd" secondAttribute="bottom" constant="50" id="vWL-R9-NAl"/>
+                    <constraint firstItem="zBp-bc-46Q" firstAttribute="top" secondItem="JPb-lG-Ycd" secondAttribute="bottom" constant="50" id="mPS-DA-4an"/>
+                    <constraint firstItem="Jxc-YU-CGb" firstAttribute="leading" secondItem="g8h-IC-jsJ" secondAttribute="leading" constant="10" id="obO-5d-Gib"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="menuView" destination="baj-bi-o1h" id="N4I-3U-ZsU"/>
+                <outlet property="messageButton" destination="xr2-QN-Lj4" id="DAc-E6-dbP"/>
+                <outlet property="notificationButton" destination="Jxc-YU-CGb" id="LU7-01-ucm"/>
+                <outlet property="profileButton" destination="zBp-bc-46Q" id="hp7-1P-3it"/>
+                <outlet property="settingButton" destination="NmD-zJ-wtC" id="aUE-qy-jzw"/>
             </connections>
             <point key="canvasLocation" x="-103.05343511450381" y="-10.563380281690142"/>
         </viewController>

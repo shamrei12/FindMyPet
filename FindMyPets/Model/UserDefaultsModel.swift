@@ -10,6 +10,7 @@ class UserDefaultsModel: UserDefaultsProtocol {
     
     private var storage = UserDefaults.standard
     private var storageKey = "profile"
+    private var settingKey = "setting"
     
     private enum ContactKey: String {
         case name
@@ -39,5 +40,15 @@ class UserDefaultsModel: UserDefaultsProtocol {
         storage.set(arrayForStorage, forKey: storageKey)
     }
     
+    func saveTheme(_ type: Bool) {
+        storage.set(type, forKey: settingKey)
+    }
     
+    func showTheme() -> Bool {
+        if storage.object(forKey: settingKey) == nil {
+            return false
+        } else {
+            return storage.bool(forKey: settingKey)
+        }
+    }
 }
