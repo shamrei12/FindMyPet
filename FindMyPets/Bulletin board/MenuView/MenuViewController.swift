@@ -7,23 +7,61 @@
 
 import UIKit
 
+
+
 class MenuViewController: UIViewController {
+    func visible() {
+        profileButton.isHidden = false
+        messageButton.isHidden = false
+        notificationButton.isHidden = false
+        settingButton.isHidden = false
+    }
+    
+    func hide() {
+        profileButton.isHidden = true
+        messageButton.isHidden = true
+        notificationButton.isHidden = true
+        settingButton.isHidden = true
+    }
+    
+    
+    
     @IBOutlet weak var menuView: UIView!
     var userDefaults = UserDefaults.standard
     var key = "access"
     private var menuImage = false
-    let container = ContainerViewController()
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var messageButton: UIButton!
+    @IBOutlet weak var notificationButton: UIButton!
+    @IBOutlet weak var settingButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
 
     }
-
-        @objc func didTapScrollView() {
-            container.hideMenu()
-        }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        visible()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        hide()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hide()
+    }
+    
+
+    @IBAction func SettingTapped(_ sender: UIButton) {
+        let setting = SettingViewController.instantiate()
+        setting.modalPresentationStyle = .fullScreen
+        present(setting, animated: true)
+    }
     
     
     @IBAction func messageTapped(_ sender: UIButton) {
@@ -32,15 +70,12 @@ class MenuViewController: UIViewController {
         present(message, animated: true)
     }
     
+
     
     @IBAction func profileTapped(_ sender: UIButton) {
         let profile = ProfileViewController.instantiate()
         profile.modalPresentationStyle = .fullScreen
         present(profile, animated: true)
     }
-    
-    @IBAction func enterTapped(_ sender: UIButton) {
-        userDefaults.set(false, forKey: key)
-        
-    }
+
 }

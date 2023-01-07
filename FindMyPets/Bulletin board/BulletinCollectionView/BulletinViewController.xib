@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +19,7 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <items>
                             <navigationItem style="editor" id="JlD-Zg-LRq">
-                                <barButtonItem key="leftBarButtonItem" title="Item" image="menu_1" id="f68-Tx-nUh">
+                                <barButtonItem key="leftBarButtonItem" style="plain" id="f68-Tx-nUh">
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="menuTapped:" destination="VBQ-iu-0iA" id="R9D-2r-hnx"/>
@@ -33,9 +34,12 @@
                             </navigationItem>
                         </items>
                     </navigationBar>
-                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qpM-xd-9Aa">
+                    <searchBar opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qpM-xd-9Aa">
                         <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                         <textInputTraits key="textInputTraits"/>
+                        <scopeButtonTitles>
+                            <string>Title</string>
+                        </scopeButtonTitles>
                         <connections>
                             <outlet property="delegate" destination="VBQ-iu-0iA" id="VNA-ht-BrJ"/>
                         </connections>
@@ -56,7 +60,8 @@
                     </collectionView>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="vEm-yf-fR5"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                <gestureRecognizers/>
                 <constraints>
                     <constraint firstItem="aNP-JE-aTc" firstAttribute="top" secondItem="qpM-xd-9Aa" secondAttribute="bottom" id="2DK-5R-nUU"/>
                     <constraint firstItem="vEm-yf-fR5" firstAttribute="bottom" secondItem="aNP-JE-aTc" secondAttribute="bottom" id="GhB-Ph-jj5"/>
@@ -69,16 +74,35 @@
                     <constraint firstItem="aNP-JE-aTc" firstAttribute="trailing" secondItem="vEm-yf-fR5" secondAttribute="trailing" id="oQb-7i-9Ln"/>
                     <constraint firstItem="qpM-xd-9Aa" firstAttribute="leading" secondItem="vEm-yf-fR5" secondAttribute="leading" id="yK9-VN-tOa"/>
                 </constraints>
+                <connections>
+                    <outletCollection property="gestureRecognizers" destination="8Nx-lo-xzY" appends="YES" id="RCN-J8-kyK"/>
+                    <outletCollection property="gestureRecognizers" destination="khq-F9-ARk" appends="YES" id="s7m-g3-vhd"/>
+                </connections>
             </view>
             <connections>
                 <outlet property="bulletinView" destination="aet-xj-q9R" id="gdw-0c-0zr"/>
                 <outlet property="collectionView" destination="aNP-JE-aTc" id="kse-Cl-yc3"/>
+                <outlet property="createAdvert" destination="WJN-OS-yk8" id="NqD-sa-afa"/>
                 <outlet property="menuTapped" destination="f68-Tx-nUh" id="mve-bi-b9Z"/>
+                <outlet property="navBar" destination="eb5-Ba-TGE" id="rOs-oH-vOi"/>
+                <outlet property="searchBar" destination="qpM-xd-9Aa" id="ihU-oo-An2"/>
             </connections>
             <point key="canvasLocation" x="-190.07633587786259" y="5.6338028169014089"/>
         </viewController>
+        <swipeGestureRecognizer direction="right" id="khq-F9-ARk">
+            <connections>
+                <action selector="swipeRight:" destination="VBQ-iu-0iA" id="fXa-Ii-mcu"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="left" id="8Nx-lo-xzY">
+            <connections>
+                <action selector="swipeLeft:" destination="VBQ-iu-0iA" id="LCI-PE-s1q"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
-        <image name="menu_1" width="24" height="24"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

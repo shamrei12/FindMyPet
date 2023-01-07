@@ -23,11 +23,13 @@
                         <items>
                             <navigationItem title="Профиль" id="PYA-wA-6cM">
                                 <barButtonItem key="leftBarButtonItem" image="arrowshape.backward" catalog="system" id="RIF-AY-Vk8">
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="backtapped:" destination="x52-vY-ZQT" id="rzj-np-xcZ"/>
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem key="rightBarButtonItem" title="Сохранить" id="8xj-M0-pEB">
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="saveTapped:" destination="x52-vY-ZQT" id="ISK-s2-Acj"/>
                                     </connections>
@@ -45,6 +47,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-p6-iaI">
                                 <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
                                 <connections>
@@ -63,6 +66,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUG-ll-E5J">
                                 <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
                                 <connections>
@@ -93,7 +97,9 @@
                 <outlet property="bulletinTupped" destination="RIF-AY-Vk8" id="IOX-a7-POg"/>
                 <outlet property="changeName" destination="a2x-p6-iaI" id="IAD-Wk-rFJ"/>
                 <outlet property="changeNumber" destination="jUG-ll-E5J" id="gA9-oS-6TY"/>
+                <outlet property="mainView" destination="kBn-jY-M5Y" id="G5D-pL-POn"/>
                 <outlet property="nameLabel" destination="uCa-W8-bDh" id="SKg-WT-Qse"/>
+                <outlet property="navBar" destination="2GM-rc-4Gu" id="52S-fw-cZL"/>
                 <outlet property="numberLabel" destination="SNt-tI-fbe" id="D2v-qq-t2n"/>
                 <outlet property="saveTapped" destination="8xj-M0-pEB" id="fYF-sU-ag8"/>
             </connections>

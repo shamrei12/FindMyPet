@@ -37,8 +37,9 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
     func configureMenuViewController() {
         if menuViewController == nil {
             menuViewController = MenuViewController.instantiate()
-            view.insertSubview(menuViewController.view, at: 0)
+            view.insertSubview(menuViewController.view, at: 1)
             addChild(menuViewController)
+            menuViewController.view.frame.size.width = 0
         }
     }
     
@@ -51,7 +52,8 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
                            initialSpringVelocity: 0,
                            options: .curveEaseInOut,
                            animations: {
-                self.controller.view.frame.origin.x = self.controller.view.frame.width - 140
+                self.menuViewController.view.frame.size.width = 240
+                self.menuViewController.viewWillAppear(true)
             })
         } else {
             UIView.animate(withDuration: 0.5,
@@ -60,7 +62,8 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
                            initialSpringVelocity: 0,
                            options: .curveEaseInOut,
                            animations: {
-                self.controller.view.frame.origin.x = 0
+                self.menuViewController.view.frame.size.width = 0
+                self.menuViewController.viewWillDisappear(true)
             })
         }
     }
@@ -72,9 +75,21 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
         showBulletinViewController(shouldMove: isMove)
     }
     
+    func swipeRight() {
+        configureMenuViewController()
+        showBulletinViewController(shouldMove: true)
+    }
+
+    func swipeLeft() {
+        configureMenuViewController()
+        showBulletinViewController(shouldMove: false)
+    }
+    
+    
+    
     func hideMenu() {
         configureBulletinViewController()
         showBulletinViewController(shouldMove: true)
     }
-
+    
 }

@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oel-93-0Hb">
-                        <rect key="frame" x="20" y="5" width="252" height="89"/>
+                        <rect key="frame" x="20" y="0.0" width="242" height="94"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваша собака у нас! Бабки на стол или будет хуже! &lt;KF&lt;FKF&lt;FKFFJO{PSOHDASODBASIUPDB PSA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61b-GY-nB2">
-                                <rect key="frame" x="10" y="5" width="237" height="79"/>
+                                <rect key="frame" x="10" y="5" width="227" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -46,14 +46,17 @@
                 <constraints>
                     <constraint firstItem="lCG-QH-YPD" firstAttribute="top" secondItem="oel-93-0Hb" secondAttribute="bottom" id="1eX-Gs-JTh"/>
                     <constraint firstAttribute="bottom" secondItem="lCG-QH-YPD" secondAttribute="bottom" id="Dh5-0F-OFv"/>
-                    <constraint firstAttribute="trailing" secondItem="oel-93-0Hb" secondAttribute="trailing" constant="60" id="HG5-vZ-e3G"/>
+                    <constraint firstAttribute="trailing" secondItem="oel-93-0Hb" secondAttribute="trailing" constant="70" id="HG5-vZ-e3G"/>
                     <constraint firstItem="lCG-QH-YPD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OCu-St-znW"/>
-                    <constraint firstItem="oel-93-0Hb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="YEo-zZ-svt"/>
+                    <constraint firstItem="oel-93-0Hb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YEo-zZ-svt"/>
                     <constraint firstAttribute="trailing" secondItem="lCG-QH-YPD" secondAttribute="trailing" id="bp9-1j-9GJ"/>
                     <constraint firstItem="oel-93-0Hb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qpM-s7-H8w"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="message" destination="61b-GY-nB2" id="Peq-aw-QPs"/>
+            </connections>
             <point key="canvasLocation" x="65.648854961832058" y="38.380281690140848"/>
         </tableViewCell>
     </objects>

@@ -13,12 +13,15 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak private var bulletinTupped: UIBarButtonItem!
     private var choiceButton: Bool = false
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var changeName: UIButton!
     @IBOutlet weak var changeNumber: UIButton!
     
+    
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak private var nameLabel: UITextField!
     @IBOutlet weak private var numberLabel: UITextField!
-    private var user: UserDefaultsModel?
+    private var user: UserDefaultsModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,35 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         numberLabel.isUserInteractionEnabled = false
         nameLabel.placeholder = profile?.first?.name
         numberLabel.placeholder = profile?.first?.number
+        
+        if user.showTheme() {
+            navBar.tintColor = UIColor.white
+            navBar.barTintColor = UIColor.black
+            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            nameLabel.attributedPlaceholder = NSAttributedString(
+                string: profile?.first?.name ?? "", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+            numberLabel.attributedPlaceholder = NSAttributedString(
+                string: profile?.first?.number ?? "", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+            changeName.tintColor = UIColor.white
+            changeNumber.tintColor = UIColor.white
+            mainView.layer.backgroundColor = UIColor.black.cgColor
+            saveTapped.tintColor = UIColor.white
+            bulletinTupped.tintColor = UIColor.white
+            
+        } else {
+            navBar.tintColor = UIColor.black
+            navBar.barTintColor = UIColor.white
+            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            changeName.tintColor = UIColor.black
+            changeNumber.tintColor = UIColor.black
+            mainView.layer.backgroundColor = UIColor.white.cgColor
+            saveTapped.tintColor = UIColor.black
+            bulletinTupped.tintColor = UIColor.black
+            nameLabel.attributedPlaceholder = NSAttributedString(
+                string: profile?.first?.name ?? "", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+            numberLabel.attributedPlaceholder = NSAttributedString(
+                string: profile?.first?.number ?? "", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray])
+        }
     }
     
     @IBAction func changeName(_ sender: UIButton) {
