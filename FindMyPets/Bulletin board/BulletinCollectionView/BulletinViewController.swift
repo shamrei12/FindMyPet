@@ -80,6 +80,7 @@ class BulletinViewController: UIViewController {
     private var profile: UserDefaultsModel!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var searchBar: UISearchBar!
+    private let cell: BulletinCollectionViewCell? = nil
     
 
     
@@ -87,9 +88,12 @@ class BulletinViewController: UIViewController {
         super.viewDidLoad()
         user = Data()
         profile = UserDefaultsModel()
+        
 //      bulletinView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapScrollView)))
         profile?.load()
+        updateCell()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
+
     }
     
 //    
@@ -104,41 +108,64 @@ class BulletinViewController: UIViewController {
 //        }
 //    }
     
-
+    func updateCell() {
+//        cell?.mainView.layer.cornerRadius = 5
+//        cell?.mainView.makeShadow()
+//        cell?.makeShadow()
+        
+    }
+    
     @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
         delegate?.swipeRight()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print(1)
+        delegate?.swipeLeft()
         listAdvert = []
         addPets()
-        updateUI()
+//        delegate?.swipeLeft()
+
+//        updateUI()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        delegate?.swipeLeft()
     }
     
-    func updateUI() {
-        if profile.showTheme() {
-            navBar.tintColor = UIColor.white
-            navBar.barTintColor = UIColor.black
-            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-            collectionView.layer.backgroundColor = UIColor.black.cgColor
-            bulletinView.backgroundColor = UIColor.black
-            createAdvert.tintColor = UIColor.white
-            menuTapped.setBackgroundImage(UIImage(named: "menu_2.png"), for: .normal, barMetrics: .default)
-            searchBar.barStyle = .black
-            
-        
-        } else {
-            navBar.tintColor = UIColor.black
-            navBar.barTintColor = UIColor.white
-            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-            collectionView.layer.backgroundColor = UIColor.white.cgColor
-            bulletinView.backgroundColor = UIColor.white
-            createAdvert.tintColor = UIColor.black
-            menuTapped.setBackgroundImage(UIImage(named: "menu_1.png"), for: .normal, barMetrics: .default)
-            searchBar.barStyle = .default
-        }
-    }
+//    func updateUI() {
+//        if profile.showTheme() {
+//            navBar.tintColor = UIColor.white
+//            navBar.barTintColor = UIColor.black
+//            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//            navBar.compactAppearance?.backgroundColor = UIColor.black
+//            collectionView.layer.backgroundColor = UIColor.black.cgColor
+//            bulletinView.backgroundColor = UIColor.black
+//            createAdvert.tintColor = UIColor.white
+//            menuTapped.setBackgroundImage(UIImage(named: "menu_2.png"), for: .normal, barMetrics: .default)
+//            searchBar.barStyle = .black
+//            cell?.mainView.backgroundColor = UIColor.red
+//            cell?.advertName.textColor = .white
+//            cell?.backgroundColor = .red
+//
+//
+//        } else {
+////            navBar.tintColor = UIColor.black
+////            navBar.barTintColor = UIColor.white
+////            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+//
+//            collectionView.layer.backgroundColor = UIColor.white.cgColor
+//            bulletinView.backgroundColor = UIColor.white
+//            createAdvert.tintColor = UIColor.black
+//            menuTapped.setBackgroundImage(UIImage(named: "menu_1.png"), for: .normal, barMetrics: .default)
+//            searchBar.barStyle = .default
+//            cell?.mainView.backgroundColor = UIColor.white
+//            cell?.advertName.textColor = .black
+//            navBar.compactAppearance?.backgroundColor = UIColor.white
+//
+//        }
+//    }
     func addPets() {
         let objects: [LostPets] = user?.load() as! [LostPets]
 //        let objects = user?.load()

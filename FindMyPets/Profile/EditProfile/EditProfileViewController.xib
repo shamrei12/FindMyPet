@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="FindMyPets" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController modalPresentationStyle="pageSheet" id="oes-j8-dFA" customClass="EditProfileViewController" customModule="FindMyPets" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="yTC-s2-zO8">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwg-mP-sjn">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <items>
+                            <navigationItem title="Редактировать" id="F2G-N4-qWA">
+                                <barButtonItem key="leftBarButtonItem" title="Отмена" id="Rip-94-poW">
+                                    <connections>
+                                        <action selector="cancelTapped:" destination="oes-j8-dFA" id="OvV-xa-c2z"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem key="rightBarButtonItem" title="Сохранить" id="nAH-rR-nQZ"/>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ea1-t9-21Z">
+                        <rect key="frame" x="10" y="153" width="373" height="121"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="a3c-A4-6VY">
+                                <rect key="frame" x="0.0" y="0.0" width="373" height="34.333333333333336"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeG-AF-OEL">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nt9-Np-aSm">
+                                        <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g9q-Ii-cdU">
+                                <rect key="frame" x="0.0" y="43.333333333333343" width="373" height="34.333333333333343"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i07-b3-deI">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc3-Yd-4Rw">
+                                        <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r50-0s-mj0">
+                                <rect key="frame" x="0.0" y="86.666666666666657" width="373" height="34.333333333333343"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltl-a2-B5Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju0-Os-8uA">
+                                        <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="d9h-yJ-baG"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="dwg-mP-sjn" firstAttribute="top" secondItem="d9h-yJ-baG" secondAttribute="top" id="4uj-Gd-9jq"/>
+                    <constraint firstItem="dwg-mP-sjn" firstAttribute="trailing" secondItem="d9h-yJ-baG" secondAttribute="trailing" id="58S-CZ-EOA"/>
+                    <constraint firstItem="d9h-yJ-baG" firstAttribute="trailing" secondItem="Ea1-t9-21Z" secondAttribute="trailing" constant="10" id="eTA-K5-5za"/>
+                    <constraint firstItem="Ea1-t9-21Z" firstAttribute="top" secondItem="dwg-mP-sjn" secondAttribute="bottom" constant="50" id="iRf-LV-kpm"/>
+                    <constraint firstItem="dwg-mP-sjn" firstAttribute="leading" secondItem="d9h-yJ-baG" secondAttribute="leading" id="p22-Do-buH"/>
+                    <constraint firstItem="Ea1-t9-21Z" firstAttribute="leading" secondItem="d9h-yJ-baG" secondAttribute="leading" constant="10" id="pf4-tS-Ksd"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="69" y="22"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

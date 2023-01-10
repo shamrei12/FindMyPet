@@ -13,9 +13,13 @@ class BulletinCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var advertName: UILabel!
     @IBOutlet weak var informationText: UILabel!
     var cell: BulletinCollectionViewCell!
+    @IBOutlet weak var mainView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        mainView.makeShadow()
+        imagePet.layer.cornerRadius = 10
     }
-
+    
+    
 }

@@ -24,3 +24,13 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+extension UIView {
+    func makeShadow() {
+        self.layer.shadowColor = UIColor.systemGray.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSizeZero
+        self.layer.shadowRadius = 3
+        self.layer.cornerRadius = 10
+    }
+}

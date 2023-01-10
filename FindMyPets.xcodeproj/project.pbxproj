@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8000BF6296DD0DF00A49E30 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8000BF4296DD0DF00A49E30 /* EditProfileViewController.swift */; };
+		D8000BF7296DD0DF00A49E30 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8000BF5296DD0DF00A49E30 /* EditProfileViewController.xib */; };
 		D82F9AF2295B56BA00439224 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F9AF0295B56BA00439224 /* ProfileViewController.swift */; };
 		D82F9AF3295B56BA00439224 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82F9AF1295B56BA00439224 /* ProfileViewController.xib */; };
 		D841E0EB295EF3EB00FF18F5 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841E0EA295EF3EB00FF18F5 /* ProfileModel.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8000BF4296DD0DF00A49E30 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		D8000BF5296DD0DF00A49E30 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		D82F9AF0295B56BA00439224 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D82F9AF1295B56BA00439224 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		D841E0EA295EF3EB00FF18F5 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -99,9 +103,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8000BF3296DD0C600A49E30 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				D8000BF4296DD0DF00A49E30 /* EditProfileViewController.swift */,
+				D8000BF5296DD0DF00A49E30 /* EditProfileViewController.xib */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 		D82F9AF4295B570300439224 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D8000BF3296DD0C600A49E30 /* EditProfile */,
 				D82F9AF0295B56BA00439224 /* ProfileViewController.swift */,
 				D82F9AF1295B56BA00439224 /* ProfileViewController.xib */,
 			);
@@ -348,6 +362,7 @@
 			files = (
 				D8525A682964604A00E97BC5 /* ChatsViewController.xib in Resources */,
 				D89C336C2950EE0300146974 /* AdvertViewController.xib in Resources */,
+				D8000BF7296DD0DF00A49E30 /* EditProfileViewController.xib in Resources */,
 				D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */,
 				D82F9AF3295B56BA00439224 /* ProfileViewController.xib in Resources */,
 				D8441CB629649F550083A993 /* UserChatTableViewCell.xib in Resources */,
@@ -378,6 +393,7 @@
 				D89C334A294F277200146974 /* SceneDelegate.swift in Sources */,
 				D8CC7AE62956F20E00D24F03 /* Lostpet.swift in Sources */,
 				D8CF61A42961E0CA004F843E /* TimeManager.swift in Sources */,
+				D8000BF6296DD0DF00A49E30 /* EditProfileViewController.swift in Sources */,
 				D8CC7ADE2955BF9900D24F03 /* ContainerViewController.swift in Sources */,
 				D89C335F294F297B00146974 /* BulletinViewController.swift in Sources */,
 				D8525A672964604A00E97BC5 /* ChatsViewController.swift in Sources */,
