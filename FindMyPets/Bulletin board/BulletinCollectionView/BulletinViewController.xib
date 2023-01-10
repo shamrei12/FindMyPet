@@ -15,18 +15,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-Ba-TGE">
+                    <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-Ba-TGE">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <items>
                             <navigationItem style="editor" id="JlD-Zg-LRq">
-                                <barButtonItem key="leftBarButtonItem" style="plain" id="f68-Tx-nUh">
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="f68-Tx-nUh">
+                                    <color key="tintColor" systemColor="labelColor"/>
                                     <connections>
                                         <action selector="menuTapped:" destination="VBQ-iu-0iA" id="R9D-2r-hnx"/>
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem key="rightBarButtonItem" title="Создать объявление" id="WJN-OS-yk8">
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
                                     <connections>
                                         <action selector="createAdvert:" destination="VBQ-iu-0iA" id="62j-an-h5w"/>
                                     </connections>
@@ -46,9 +46,9 @@
                     </searchBar>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-JE-aTc">
                         <rect key="frame" x="0.0" y="159" width="393" height="659"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="jlK-xF-FsK">
-                            <size key="itemSize" width="390" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="10" id="jlK-xF-FsK">
+                            <size key="itemSize" width="390" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -101,7 +101,14 @@
         </swipeGestureRecognizer>
     </objects>
     <resources>
+        <image name="menu" width="30" height="30"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
