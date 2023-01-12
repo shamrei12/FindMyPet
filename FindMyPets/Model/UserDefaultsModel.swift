@@ -24,7 +24,7 @@ class UserDefaultsModel: UserDefaultsProtocol {
         guard let name = storageProfile.first?[ContactKey.name.rawValue],
               let number = storageProfile.first?[ContactKey.number.rawValue],
               let surname = storageProfile.first?[ContactKey.surname.rawValue] else {
-            return [Profile(name: "Анонимный", surname: "Аноним", number: "Введите номер телефона")]
+            return [Profile(name: "Аноним", surname: "Анонимный", number: "Введите номер телефона")]
             }
         resultProfile.append(Profile(name: name, surname: surname, number: number))
         return resultProfile

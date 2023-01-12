@@ -9,7 +9,9 @@ import UIKit
 
 
 
+
 class MenuViewController: UIViewController {
+    
     func visible() {
         profileButton.isHidden = false
         messageButton.isHidden = false
@@ -24,8 +26,6 @@ class MenuViewController: UIViewController {
         settingButton.isHidden = true
     }
     
-    
-    
     @IBOutlet weak var menuView: UIView!
     var userDefaults = UserDefaults.standard
     var key = "access"
@@ -38,25 +38,30 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //        visible()
+        print("viewDidLoad")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //        visible()
         visible()
+        print("viewWillAppear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         hide()
+        print("viewDidDisappear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         hide()
+        print("viewWillDisappear")
     }
     
-
+    
     @IBAction func SettingTapped(_ sender: UIButton) {
         let setting = SettingViewController.instantiate()
         setting.modalPresentationStyle = .fullScreen
@@ -70,12 +75,10 @@ class MenuViewController: UIViewController {
         present(message, animated: true)
     }
     
-
-    
     @IBAction func profileTapped(_ sender: UIButton) {
         let profile = ProfileViewController.instantiate()
         profile.modalPresentationStyle = .fullScreen
         present(profile, animated: true)
     }
-
+    
 }
