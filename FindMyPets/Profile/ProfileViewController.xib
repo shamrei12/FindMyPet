@@ -25,7 +25,7 @@
                                         <action selector="backtapped:" destination="x52-vY-ZQT" id="rzj-np-xcZ"/>
                                     </connections>
                                 </barButtonItem>
-                                <barButtonItem key="rightBarButtonItem" title="Сохранить" id="8xj-M0-pEB">
+                                <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="8xj-M0-pEB">
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <connections>
                                         <action selector="saveTapped:" destination="x52-vY-ZQT" id="ISK-s2-Acj"/>
@@ -119,6 +119,7 @@
     </objects>
     <resources>
         <image name="arrowshape.backward" catalog="system" width="128" height="104"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="transition" width="24" height="24"/>
         <image name="user" width="300" height="300"/>
         <image name="userEdit" width="16" height="16"/>

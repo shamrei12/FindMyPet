@@ -7,14 +7,13 @@
 
 import UIKit
 
-
+protocol ToogleMenuDelegate {
+    func hide()
+    func visible()
+}
 
 class ContainerViewController: UIViewController, BulletinViewControllerDeleagete {
-    
-    func exitUserTapped() {
-        toogleMenu()
-    }
-    
+
     var controller: UIViewController!
     var menuViewController: UIViewController!
     var isMove = false
@@ -52,8 +51,9 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
                            initialSpringVelocity: 0,
                            options: .curveEaseInOut,
                            animations: {
-                self.menuViewController.view.frame.size.width = 240
+                self.menuViewController.view.frame.size.width = 200
                 self.menuViewController.viewWillAppear(true)
+                
             })
         } else {
             UIView.animate(withDuration: 0.5,
@@ -62,34 +62,23 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
                            initialSpringVelocity: 0,
                            options: .curveEaseInOut,
                            animations: {
-                self.menuViewController.view.frame.size.width = 0
                 self.menuViewController.viewWillDisappear(true)
+                self.menuViewController.view.frame.size.width = 0
             })
         }
     }
     
     //MARK: Menu
-    func toogleMenu() {
-        configureMenuViewController()
-        isMove = !isMove
-        showBulletinViewController(shouldMove: isMove)
-    }
-    
-    func swipeRight() {
+    func showMenu() {
         configureMenuViewController()
         showBulletinViewController(shouldMove: true)
     }
-
-    func swipeLeft() {
+    
+    func hideMenu() {
         configureMenuViewController()
         showBulletinViewController(shouldMove: false)
     }
     
-    
-    
-    func hideMenu() {
-        configureBulletinViewController()
-        showBulletinViewController(shouldMove: true)
-    }
+
     
 }

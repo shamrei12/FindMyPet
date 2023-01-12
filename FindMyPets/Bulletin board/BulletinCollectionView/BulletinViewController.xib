@@ -22,7 +22,7 @@
                                 <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="f68-Tx-nUh">
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <connections>
-                                        <action selector="menuTapped:" destination="VBQ-iu-0iA" id="R9D-2r-hnx"/>
+                                        <action selector="menuTapped:" destination="VBQ-iu-0iA" id="Bm0-lj-Ava"/>
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem key="rightBarButtonItem" title="Создать объявление" id="WJN-OS-yk8">
@@ -83,7 +83,6 @@
                 <outlet property="bulletinView" destination="aet-xj-q9R" id="gdw-0c-0zr"/>
                 <outlet property="collectionView" destination="aNP-JE-aTc" id="kse-Cl-yc3"/>
                 <outlet property="createAdvert" destination="WJN-OS-yk8" id="NqD-sa-afa"/>
-                <outlet property="menuTapped" destination="f68-Tx-nUh" id="mve-bi-b9Z"/>
                 <outlet property="navBar" destination="eb5-Ba-TGE" id="rOs-oH-vOi"/>
                 <outlet property="searchBar" destination="qpM-xd-9Aa" id="ihU-oo-An2"/>
             </connections>

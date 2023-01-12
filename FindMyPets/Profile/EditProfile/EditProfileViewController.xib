@@ -24,59 +24,63 @@
                                         <action selector="cancelTapped:" destination="oes-j8-dFA" id="OvV-xa-c2z"/>
                                     </connections>
                                 </barButtonItem>
-                                <barButtonItem key="rightBarButtonItem" title="Сохранить" id="nAH-rR-nQZ"/>
+                                <barButtonItem key="rightBarButtonItem" title="Сохранить" id="nAH-rR-nQZ">
+                                    <connections>
+                                        <action selector="saveInfoTapped:" destination="oes-j8-dFA" id="tJF-Ce-bns"/>
+                                    </connections>
+                                </barButtonItem>
                             </navigationItem>
                         </items>
                     </navigationBar>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ea1-t9-21Z">
-                        <rect key="frame" x="10" y="153" width="373" height="121"/>
+                        <rect key="frame" x="10" y="153" width="373" height="120"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="a3c-A4-6VY">
-                                <rect key="frame" x="0.0" y="0.0" width="373" height="34.333333333333336"/>
+                                <rect key="frame" x="0.0" y="0.0" width="373" height="34"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H2-JE-BaU">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeG-AF-OEL">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
+                                        <rect key="frame" x="43" y="0.0" width="330" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nt9-Np-aSm">
-                                        <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g9q-Ii-cdU">
-                                <rect key="frame" x="0.0" y="43.333333333333343" width="373" height="34.333333333333343"/>
+                                <rect key="frame" x="0.0" y="43" width="373" height="34"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh8-y9-IGy">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i07-b3-deI">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
+                                        <rect key="frame" x="82.666666666666657" y="0.0" width="290.33333333333337" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc3-Yd-4Rw">
-                                        <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r50-0s-mj0">
-                                <rect key="frame" x="0.0" y="86.666666666666657" width="373" height="34.333333333333343"/>
+                                <rect key="frame" x="0.0" y="86" width="373" height="34"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPE-00-okV">
+                                        <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltl-a2-B5Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="34.333333333333336"/>
+                                        <rect key="frame" x="144.66666666666663" y="0.0" width="228.33333333333337" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju0-Os-8uA">
-                                        <rect key="frame" x="270" y="0.0" width="103" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Изменить"/>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -93,13 +97,15 @@
                     <constraint firstItem="Ea1-t9-21Z" firstAttribute="leading" secondItem="d9h-yJ-baG" secondAttribute="leading" constant="10" id="pf4-tS-Ksd"/>
                 </constraints>
             </view>
+            <connections>
+                <outlet property="userName" destination="CeG-AF-OEL" id="l8v-08-sLF"/>
+                <outlet property="userNumber" destination="ltl-a2-B5Y" id="eE6-Wx-cdF"/>
+                <outlet property="userSurname" destination="i07-b3-deI" id="CYP-7E-7XU"/>
+            </connections>
             <point key="canvasLocation" x="69" y="22"/>
         </viewController>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
