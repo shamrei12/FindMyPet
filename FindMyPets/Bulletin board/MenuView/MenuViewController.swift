@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-
-
 class MenuViewController: UIViewController {
     
     func visible() {
@@ -38,7 +35,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        visible()
+        hide()
         print("viewDidLoad")
     }
     
