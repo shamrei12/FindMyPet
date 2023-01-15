@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GM-rc-4Gu">
-                        <rect key="frame" x="0.0" y="59" width="400" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <items>
                             <navigationItem title="Профиль" id="PYA-wA-6cM">
                                 <barButtonItem key="leftBarButtonItem" image="arrowshape.backward" catalog="system" id="RIF-AY-Vk8">
@@ -27,31 +27,27 @@
                                 </barButtonItem>
                                 <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="8xj-M0-pEB">
                                     <color key="tintColor" systemColor="labelColor"/>
-                                    <connections>
-                                        <action selector="saveTapped:" destination="x52-vY-ZQT" id="ISK-s2-Acj"/>
-                                    </connections>
                                 </barButtonItem>
                             </navigationItem>
                         </items>
                     </navigationBar>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="G9h-vG-byq">
-                        <rect key="frame" x="50" y="153" width="300" height="200"/>
+                        <rect key="frame" x="50" y="153" width="293" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="200" id="LpL-ZY-DUO"/>
-                            <constraint firstAttribute="height" constant="200" id="PrS-R7-l9D"/>
+                            <constraint firstAttribute="height" constant="100" id="slh-aD-JFT"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w99-W6-RZw">
-                        <rect key="frame" x="20" y="383" width="360" height="35"/>
+                        <rect key="frame" x="20" y="293.33333333333331" width="353" height="35"/>
                         <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9rl-sr-lCq">
-                        <rect key="frame" x="30" y="518" width="340" height="50"/>
+                        <rect key="frame" x="30" y="428.33333333333331" width="333" height="50"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-CN-0Ab">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userEdit" translatesAutoresizingMaskIntoConstraints="NO" id="7z6-Ux-4rn">
                                         <rect key="frame" x="10" y="10" width="16" height="30"/>
@@ -63,7 +59,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nt-5T-k2O">
-                                        <rect key="frame" x="282" y="10" width="48" height="30"/>
+                                        <rect key="frame" x="275" y="10" width="48" height="30"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="transition"/>
@@ -88,15 +84,28 @@
                             </view>
                         </subviews>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-Ol-Tih">
+                        <rect key="frame" x="123" y="254.00000000000003" width="147" height="29.333333333333343"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="изменить фото">
+                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="addPhoto:" destination="x52-vY-ZQT" eventType="touchUpInside" id="gus-Si-1u8"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="3YI-ic-qcX"/>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="G9h-vG-byq" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="50" id="8x9-q9-T1K"/>
                     <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="w99-W6-RZw" secondAttribute="trailing" constant="20" id="CLm-cg-CKP"/>
+                    <constraint firstItem="rz4-Ol-Tih" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="123" id="Dcd-h7-utM"/>
                     <constraint firstItem="9rl-sr-lCq" firstAttribute="top" secondItem="w99-W6-RZw" secondAttribute="bottom" constant="100" id="E8h-MF-daw"/>
                     <constraint firstItem="G9h-vG-byq" firstAttribute="top" secondItem="2GM-rc-4Gu" secondAttribute="bottom" constant="50" id="HDh-NU-8w6"/>
-                    <constraint firstItem="w99-W6-RZw" firstAttribute="top" secondItem="G9h-vG-byq" secondAttribute="bottom" constant="30" id="RQs-O9-KpS"/>
+                    <constraint firstItem="rz4-Ol-Tih" firstAttribute="top" secondItem="G9h-vG-byq" secondAttribute="bottom" constant="1" id="RnZ-ID-gTW"/>
+                    <constraint firstItem="3YI-ic-qcX" firstAttribute="trailing" secondItem="rz4-Ol-Tih" secondAttribute="trailing" constant="123" id="TH2-vu-mxg"/>
+                    <constraint firstItem="w99-W6-RZw" firstAttribute="top" secondItem="rz4-Ol-Tih" secondAttribute="bottom" constant="10" id="V6F-sZ-5vK"/>
                     <constraint firstItem="2GM-rc-4Gu" firstAttribute="trailing" secondItem="3YI-ic-qcX" secondAttribute="trailing" id="WmV-Ny-b6D"/>
                     <constraint firstItem="w99-W6-RZw" firstAttribute="leading" secondItem="3YI-ic-qcX" secondAttribute="leading" constant="20" id="bMJ-e3-Wil"/>
                     <constraint firstItem="2GM-rc-4Gu" firstAttribute="top" secondItem="3YI-ic-qcX" secondAttribute="top" id="dX1-2u-0ux"/>
@@ -111,7 +120,6 @@
                 <outlet property="imageProfile" destination="G9h-vG-byq" id="Dl3-yT-iHG"/>
                 <outlet property="mainView" destination="kBn-jY-M5Y" id="G5D-pL-POn"/>
                 <outlet property="navBar" destination="2GM-rc-4Gu" id="52S-fw-cZL"/>
-                <outlet property="saveTapped" destination="8xj-M0-pEB" id="fYF-sU-ag8"/>
                 <outlet property="userName" destination="w99-W6-RZw" id="SDB-Ro-bHI"/>
             </connections>
             <point key="canvasLocation" x="74.045801526717554" y="47.887323943661976"/>

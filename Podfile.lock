@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.6.2)
+  - SwiftLint (0.49.1)
+  - YandexMapsMobile (4.2.2-lite)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftLint
+  - YandexMapsMobile (= 4.2.2-lite)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftLint
+    - YandexMapsMobile
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
+  YandexMapsMobile: 6fd065b212fe36df10e3159a0635d6ad76e0881c
+
+PODFILE CHECKSUM: 172c9648f36f7b42e88ef7c32769b08b6e83ff01
+
+COCOAPODS: 1.11.3

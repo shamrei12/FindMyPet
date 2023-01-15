@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import YandexMapsMobile
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

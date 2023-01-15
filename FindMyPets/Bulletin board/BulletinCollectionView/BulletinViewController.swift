@@ -79,14 +79,12 @@ class BulletinViewController: UIViewController {
     private var profile: UserDefaultsModel!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var searchBar: UISearchBar!
-    private let cell: BulletinCollectionViewCell? = nil
-    private let menuVC = MenuViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user = Data()
         profile = UserDefaultsModel()
-        profile?.load()
+//        profile?.load()
         collectionView.register(UINib(nibName: "BulletinCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BulletinCollectionViewCell")
     }
     
@@ -99,6 +97,7 @@ class BulletinViewController: UIViewController {
         delegate?.hideMenu()
         listAdvert = []
         addPets()
+        delegate?.hideMenu()
 
     }
     override func viewDidAppear(_ animated: Bool) {
