@@ -7,9 +7,11 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class AdvertViewController: UIViewController {
     
+    let locationManager = CLLocationManager()
     @IBOutlet weak private var advertName: UILabel!
     @IBOutlet weak private var descriptoinName: UILabel!
     @IBOutlet weak private var oldPet: UILabel!
@@ -18,13 +20,29 @@ class AdvertViewController: UIViewController {
     @IBOutlet weak private var curentDate: UILabel!
     @IBOutlet weak private var numberAdvert: UILabel!
     private var user: UserDefaultsModel?
+    @IBOutlet weak var mapView: MKMapView!
+    let annotations = MKPointAnnotation()
     
     @IBOutlet weak var username: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         user = UserDefaultsModel()
+        annotations.coordinate = CLLocationCoordinate2D(latitude: 53.89944, longitude: 25.31188)
+        mapView.addAnnotation(annotations)
+
         
+        let cameraCenterd = CLLocationCoordinate2D(latitude: 53.89944, longitude: 25.31188)
+        let region = MKCoordinateRegion(center: cameraCenterd, latitudinalMeters: 3, longitudinalMeters: 3)
+        mapView.setCameraBoundary(MKMapView.CameraBoundary(coordinateRegion: region), animated: true)
+        
+        
+        let zoomRage = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 1500)
+        mapView.setCameraZoomRange(zoomRage, animated: true)
+        mapView.isZoomEnabled = true
     }
+    
+
     
     func updateUI(_ index: Int) {
         let name = user?.load().first?.name ?? ""
