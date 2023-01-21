@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,9 +46,14 @@
 		D8EFFA972965E0EB009C6210 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFFA962965E0EB009C6210 /* MessagesModel.swift */; };
 		D8EFFA9B29684FFD009C6210 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFFA9929684FFD009C6210 /* SettingViewController.swift */; };
 		D8EFFA9C29684FFD009C6210 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */; };
+		D8FFD91B297C3F4B00BE5770 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFD91A297C3F4B00BE5770 /* SessionManager.swift */; };
+		ECA3718483FF739366E871CA /* Pods_FindMyPets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BB86571E491D56540C5CB8 /* Pods_FindMyPets.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E845E48EF1B27A45CF49E77 /* Pods-FindMyPets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyPets.release.xcconfig"; path = "Target Support Files/Pods-FindMyPets/Pods-FindMyPets.release.xcconfig"; sourceTree = "<group>"; };
+		1E4CCE5BBD87115A4757E240 /* Pods-FindMyPets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyPets.debug.xcconfig"; path = "Target Support Files/Pods-FindMyPets/Pods-FindMyPets.debug.xcconfig"; sourceTree = "<group>"; };
+		34BB86571E491D56540C5CB8 /* Pods_FindMyPets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyPets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8000BF4296DD0DF00A49E30 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		D8000BF5296DD0DF00A49E30 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		D82F9AF0295B56BA00439224 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 		D8EFFA962965E0EB009C6210 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		D8EFFA9929684FFD009C6210 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		D8FFD91A297C3F4B00BE5770 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA3718483FF739366E871CA /* Pods_FindMyPets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3889D742E57015F589B94675 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34BB86571E491D56540C5CB8 /* Pods_FindMyPets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8000BF3296DD0C600A49E30 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +191,8 @@
 			children = (
 				D89C3346294F277200146974 /* FindMyPets */,
 				D89C3345294F277200146974 /* Products */,
+				E40189E38C0E42E08D1008CE /* Pods */,
+				3889D742E57015F589B94675 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -289,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				D8CF61A32961E0CA004F843E /* TimeManager.swift */,
+				D8FFD91A297C3F4B00BE5770 /* SessionManager.swift */,
 			);
 			path = TimeManager;
 			sourceTree = "<group>";
@@ -302,6 +320,15 @@
 			path = SettingView;
 			sourceTree = "<group>";
 		};
+		E40189E38C0E42E08D1008CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E4CCE5BBD87115A4757E240 /* Pods-FindMyPets.debug.xcconfig */,
+				0E845E48EF1B27A45CF49E77 /* Pods-FindMyPets.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,9 +336,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D89C3358294F277300146974 /* Build configuration list for PBXNativeTarget "FindMyPets" */;
 			buildPhases = (
+				493C52018504F189C422BA58 /* [CP] Check Pods Manifest.lock */,
 				D89C3340294F277200146974 /* Sources */,
 				D89C3341294F277200146974 /* Frameworks */,
 				D89C3342294F277200146974 /* Resources */,
+				B8E6BB4D65D02C33E9953F3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -338,7 +367,7 @@
 				};
 			};
 			buildConfigurationList = D89C333F294F277200146974 /* Build configuration list for PBXProject "FindMyPets" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -380,6 +409,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		493C52018504F189C422BA58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindMyPets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8E6BB4D65D02C33E9953F3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyPets/Pods-FindMyPets-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyPets/Pods-FindMyPets-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyPets/Pods-FindMyPets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D89C3340294F277200146974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -388,6 +459,7 @@
 				D841E0ED295EF4F700FF18F5 /* UserDefaultsModel.swift in Sources */,
 				D841E0EB295EF3EB00FF18F5 /* ProfileModel.swift in Sources */,
 				D89C3348294F277200146974 /* AppDelegate.swift in Sources */,
+				D8FFD91B297C3F4B00BE5770 /* SessionManager.swift in Sources */,
 				D8441C9E296460D30083A993 /* ChatTableViewCell.swift in Sources */,
 				D841E0F12960266100FF18F5 /* CoreDataModel.swift in Sources */,
 				D89C334A294F277200146974 /* SceneDelegate.swift in Sources */,
@@ -542,6 +614,7 @@
 		};
 		D89C3359294F277300146974 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E4CCE5BBD87115A4757E240 /* Pods-FindMyPets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -570,6 +643,7 @@
 		};
 		D89C335A294F277300146974 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E845E48EF1B27A45CF49E77 /* Pods-FindMyPets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

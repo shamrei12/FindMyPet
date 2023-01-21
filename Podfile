@@ -6,5 +6,5 @@ target 'FindMyPets' do
 
   pod 'Alamofire'
   pod 'SwiftLint'
-  pod 'YandexMapsMobile', '4.2.2-lite'
+  pod 'OpenCageSDK'
 end

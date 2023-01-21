@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import OpenCageSDK
 
 extension BulletinViewController: UICollectionViewDelegate {
     
@@ -98,8 +99,9 @@ class BulletinViewController: UIViewController {
         listAdvert = []
         addPets()
         delegate?.hideMenu()
-
+        sessionMan()
     }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 //        delegate?.showMenu()
@@ -107,6 +109,13 @@ class BulletinViewController: UIViewController {
         delegate?.hideMenu()
     }
     
+    func sessionMan() {
+        SessionManager.shared.getCoord(adress: "Беларусь, Лида, Мицкевича, 38") { data in
+            print(data.locations.first?.longitude ?? "1")
+            print(data.locations.first?.latitude ?? "2")
+            
+        }
+    }
     func addPets() {
         let objects: [LostPets] = user?.load() as! [LostPets]
         for advert in 0..<objects.count {
