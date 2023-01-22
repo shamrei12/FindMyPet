@@ -39,8 +39,6 @@
 		D8CC7AE22955EB8D00D24F03 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AE02955EB8D00D24F03 /* MenuViewController.swift */; };
 		D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AE12955EB8D00D24F03 /* MenuViewController.xib */; };
 		D8CC7AE62956F20E00D24F03 /* Lostpet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AE52956F20E00D24F03 /* Lostpet.swift */; };
-		D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */; };
-		D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */; };
 		D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8CC7AF029579B6200D24F03 /* AdvertData.xcdatamodeld */; };
 		D8CF61A42961E0CA004F843E /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CF61A32961E0CA004F843E /* TimeManager.swift */; };
 		D8EFFA972965E0EB009C6210 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EFFA962965E0EB009C6210 /* MessagesModel.swift */; };
@@ -48,6 +46,10 @@
 		D8EFFA9C29684FFD009C6210 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */; };
 		D8FFD91B297C3F4B00BE5770 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFD91A297C3F4B00BE5770 /* SessionManager.swift */; };
 		D8FFD91F297D278300BE5770 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFD91E297D278300BE5770 /* LocationManager.swift */; };
+		D8FFD923297D87A200BE5770 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFD921297D87A200BE5770 /* MapViewController.swift */; };
+		D8FFD924297D87A200BE5770 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FFD922297D87A200BE5770 /* MapViewController.xib */; };
+		D8FFD927297D9D9400BE5770 /* CreateAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFD925297D9D9400BE5770 /* CreateAdvertViewController.swift */; };
+		D8FFD92A297D9DA500BE5770 /* CreateAdvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FFD929297D9DA500BE5770 /* CreateAdvertViewController.xib */; };
 		ECA3718483FF739366E871CA /* Pods_FindMyPets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BB86571E491D56540C5CB8 /* Pods_FindMyPets.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,8 +91,6 @@
 		D8CC7AE02955EB8D00D24F03 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D8CC7AE12955EB8D00D24F03 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		D8CC7AE52956F20E00D24F03 /* Lostpet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lostpet.swift; sourceTree = "<group>"; };
-		D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
-		D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
 		D8CC7AF129579B6200D24F03 /* AdvertData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AdvertData.xcdatamodel; sourceTree = "<group>"; };
 		D8CF61A32961E0CA004F843E /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		D8EFFA962965E0EB009C6210 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
@@ -98,6 +98,10 @@
 		D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		D8FFD91A297C3F4B00BE5770 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D8FFD91E297D278300BE5770 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D8FFD921297D87A200BE5770 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D8FFD922297D87A200BE5770 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D8FFD925297D9D9400BE5770 /* CreateAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdvertViewController.swift; sourceTree = "<group>"; };
+		D8FFD929297D9DA500BE5770 /* CreateAdvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAdvertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 		D89C33682950EDCF00146974 /* AdvertPage */ = {
 			isa = PBXGroup;
 			children = (
+				D8FFD920297D873B00BE5770 /* MapKit */,
 				D89C33692950EE0300146974 /* AdvertViewController.swift */,
 				D89C336A2950EE0300146974 /* AdvertViewController.xib */,
 			);
@@ -298,8 +303,8 @@
 		D8CC7AE72956F8CA00D24F03 /* formCreateAdvert */ = {
 			isa = PBXGroup;
 			children = (
-				D8CC7AEC295704DF00D24F03 /* CreateAdvertViewController.swift */,
-				D8CC7AED295704DF00D24F03 /* CreateAdvertViewController.xib */,
+				D8FFD925297D9D9400BE5770 /* CreateAdvertViewController.swift */,
+				D8FFD929297D9DA500BE5770 /* CreateAdvertViewController.xib */,
 			);
 			path = formCreateAdvert;
 			sourceTree = "<group>";
@@ -321,6 +326,15 @@
 				D8EFFA9A29684FFD009C6210 /* SettingViewController.xib */,
 			);
 			path = SettingView;
+			sourceTree = "<group>";
+		};
+		D8FFD920297D873B00BE5770 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				D8FFD921297D87A200BE5770 /* MapViewController.swift */,
+				D8FFD922297D87A200BE5770 /* MapViewController.xib */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 		E40189E38C0E42E08D1008CE /* Pods */ = {
@@ -395,11 +409,12 @@
 				D8525A682964604A00E97BC5 /* ChatsViewController.xib in Resources */,
 				D89C336C2950EE0300146974 /* AdvertViewController.xib in Resources */,
 				D8000BF7296DD0DF00A49E30 /* EditProfileViewController.xib in Resources */,
+				D8FFD924297D87A200BE5770 /* MapViewController.xib in Resources */,
 				D8CC7AE32955EB8D00D24F03 /* MenuViewController.xib in Resources */,
 				D82F9AF3295B56BA00439224 /* ProfileViewController.xib in Resources */,
 				D8441CB629649F550083A993 /* UserChatTableViewCell.xib in Resources */,
 				D8441CAC2964883B0083A993 /* UserChatViewController.xib in Resources */,
-				D8CC7AEF295704DF00D24F03 /* CreateAdvertViewController.xib in Resources */,
+				D8FFD92A297D9DA500BE5770 /* CreateAdvertViewController.xib in Resources */,
 				D8EFFA9C29684FFD009C6210 /* SettingViewController.xib in Resources */,
 				D89C3360294F297B00146974 /* BulletinViewController.xib in Resources */,
 				D89C3367294F2D4300146974 /* BulletinCollectionViewCell.xib in Resources */,
@@ -461,6 +476,7 @@
 			files = (
 				D841E0ED295EF4F700FF18F5 /* UserDefaultsModel.swift in Sources */,
 				D841E0EB295EF3EB00FF18F5 /* ProfileModel.swift in Sources */,
+				D8FFD927297D9D9400BE5770 /* CreateAdvertViewController.swift in Sources */,
 				D89C3348294F277200146974 /* AppDelegate.swift in Sources */,
 				D8FFD91B297C3F4B00BE5770 /* SessionManager.swift in Sources */,
 				D8441C9E296460D30083A993 /* ChatTableViewCell.swift in Sources */,
@@ -481,9 +497,9 @@
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
 				D8441CB529649F550083A993 /* UserChatTableViewCell.swift in Sources */,
 				D8EFFA9B29684FFD009C6210 /* SettingViewController.swift in Sources */,
+				D8FFD923297D87A200BE5770 /* MapViewController.swift in Sources */,
 				D89C3362294F2A1300146974 /* Extension.swift in Sources */,
 				D8441CBA2964AB330083A993 /* ChatUserRightTableViewCell.swift in Sources */,
-				D8CC7AEE295704DF00D24F03 /* CreateAdvertViewController.swift in Sources */,
 				D8CC7AE22955EB8D00D24F03 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,9 +1,3 @@
-//
-//  CreateAdvertViewController.swift
-//  FindMyPets
-//
-//  Created by Алексей Шамрей on 24.12.22.
-//
 import UIKit
 import CoreData
 import OpenCageSDK
@@ -31,16 +25,24 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate, CLLocat
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak private var typePet: UIButton!
     @IBOutlet weak private var yoPet: UIButton!
+    @IBOutlet weak private var countrySelect: UIButton!
+    
     private var userDefaults = UserDefaults.standard
     private var key: String = "listAdvert"
     @IBOutlet weak private var advertName: UITextField!
     @IBOutlet weak var descriptionName: UITextView!
-    @IBOutlet weak var lostAdress: UITextField!
     private var isMove: Bool = false
     private var data: Data?
     var adress: String = ""
     @IBOutlet weak var showLocation: UISwitch!
     var locationManager: CLLocationManager?
+    
+    @IBOutlet weak var cityName: UITextField!
+    @IBOutlet weak var streetName: UITextField!
+    @IBOutlet weak var houseNumber: UITextField!
+    @IBOutlet weak var buildingNumber: UITextField!
+    
+    @IBOutlet weak var adressStack: UIStackView!
     
     
     
@@ -51,15 +53,19 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate, CLLocat
         descriptionName.layer.borderColor = UIColor.lightGray.cgColor
         descriptionName.layer.borderWidth = 0.5
         descriptionName.delegate = self
-        lostAdress.delegate = self
+        //        lostAdress.delegate = self
         choiceType()
         self.hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        lostAdress.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestAlwaysAuthorization()
+        cityName.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
+        streetName.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
+        houseNumber.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
+        buildingNumber.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
+        
+        //        locationManager = CLLocationManager()
+        //        locationManager?.delegate = self
+        //        locationManager?.requestAlwaysAuthorization()
     }
     
     @objc func editingBegan(_ textField: UITextField) {
@@ -84,12 +90,15 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate, CLLocat
         }
     }
     
-    @IBAction func cancelTapped(_ sender: UIButton) {
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
     
+    
     func valdidAdvert() -> Bool {
-        if advertName.text?.count ?? 0 > 10 && descriptionName.text.count > 10 && (yoPet.titleLabel?.text != "Возраст" && typePet.titleLabel?.text != "Тип питомца") {
+        if advertName.text?.count ?? 0 > 10 && descriptionName.text.count > 10 && (yoPet.titleLabel?.text != "Возраст" && typePet.titleLabel?.text != "Тип питомца" && countrySelect.titleLabel?.text != "Страна" && cityName.text!.count > 3 && streetName.text!.count > 3 && houseNumber.text!.count > 1) {
+            return true
+        } else if advertName.text?.count ?? 0 > 10 && descriptionName.text.count > 10 && yoPet.titleLabel?.text != "Возраст" && typePet.titleLabel?.text != "Тип питомца" && showLocation.isOn {
             return true
         } else {
             return false
@@ -97,31 +106,31 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate, CLLocat
     }
     
     
+    
     @IBAction func showGeolocation(_ sender: UISwitch) {
         if sender.isOn {
-            self.lostAdress.isHidden = true
+            adressStack.isHidden = true
             let ocSDK :OCSDK = OCSDK(apiKey: "6fdde9142f9648378e017befaec8f44c")
             ocSDK.reverseGeocode(latitude: NSNumber(value: locationManager?.location?.coordinate.latitude ?? 0.0), longitude: NSNumber(value: locationManager?.location?.coordinate.longitude ?? 0.0), withAnnotations: true) { (response, success, error) in
                 if success {
                     self.adress = response.locations.first?.formattedAddress ?? ""
-                } else {
-                    self.lostAdress.isHidden = false
                 }
             }
-            
+        } else {
+            adressStack.isHidden = false
         }
     }
     
-    @IBAction func createAdvert(_ sender: UIButton) {
+    
+    @IBAction func createAdvert(_ sender: UIBarButtonItem) {
+        var advert: [LostPet] = []
         if valdidAdvert() {
-            var advert: [LostPet] = []
-            //            advert.append(LostPets(typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", postName: advertName.text ?? "", descriptionName: descriptionName.text ?? ""))
             if showLocation.isOn {
                 advert.append(LostPets(postName: advertName.text ?? "", descriptionName: descriptionName.text ?? "", typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: adress , curentDate: TimeManager.shared.currentDate()))
             } else {
-                advert.append(LostPets(postName: advertName.text ?? "", descriptionName: descriptionName.text ?? "", typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", curentDate: TimeManager.shared.currentDate()))
+                let adressString = "\(countrySelect.titleLabel?.text), \(cityName.text ?? ""), \(streetName.text ?? ""), \(houseNumber.text ?? ""), \(buildingNumber.text ?? "")"
+                advert.append(LostPets(postName: typePet.titleLabel?.text ?? "", descriptionName: yoPet.titleLabel?.text ?? "", typePet: adressString, oldPet: advertName.text ?? "", lostAdress: descriptionName.text ?? "", curentDate: TimeManager.shared.currentDate()))
             }
-            
             data?.save(data: advert)
             dismiss(animated: true)
         }
@@ -139,10 +148,15 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate, CLLocat
         ])
         
         yoPet.menu = UIMenu(children: [
-            UIAction(title: "Возраст", state: .on, handler: optionClousure),
+            UIAction(title: "Возраст питомца", state: .on, handler: optionClousure),
             UIAction(title: "До 1 года", handler: optionClousure),
             UIAction(title: "От 1 до 3 лет", handler: optionClousure),
-            UIAction(title: "От 3 лет", handler: optionClousure),
+            UIAction(title: "От 3 лет", handler: optionClousure)
+        ])
+        
+        countrySelect.menu = UIMenu(children: [
+            UIAction(title: "Страна", state: .on, handler: optionClousure),
+            UIAction(title: "Беларусь", handler: optionClousure)
         ])
         
         typePet.showsMenuAsPrimaryAction = true
@@ -150,6 +164,8 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate, CLLocat
         
         yoPet.showsMenuAsPrimaryAction = true
         yoPet.changesSelectionAsPrimaryAction = true
+        
+        countrySelect.showsMenuAsPrimaryAction = true
+        countrySelect.changesSelectionAsPrimaryAction = true
     }
 }
-

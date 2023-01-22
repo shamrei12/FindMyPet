@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="FindMyPets" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="X2K-wV-JXP" customClass="MapViewController" customModule="FindMyPets" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="2cI-2X-qHf">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9q2-rv-iMb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <items>
+                            <navigationItem title="Карта" id="RDA-aN-RW9">
+                                <barButtonItem key="leftBarButtonItem" title="Назад" image="arrowshape.backward" catalog="system" id="P8i-gb-kFa">
+                                    <connections>
+                                        <action selector="backTapped:" destination="X2K-wV-JXP" id="2wU-0i-egH"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58f-KG-bPL">
+                        <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                        <standardMapConfiguration key="preferredConfiguration"/>
+                    </mapView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="bQp-oA-89p"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="9q2-rv-iMb" firstAttribute="top" secondItem="bQp-oA-89p" secondAttribute="top" id="0Ia-Cs-Owk"/>
+                    <constraint firstItem="9q2-rv-iMb" firstAttribute="leading" secondItem="bQp-oA-89p" secondAttribute="leading" id="9f3-15-5PF"/>
+                    <constraint firstItem="58f-KG-bPL" firstAttribute="leading" secondItem="bQp-oA-89p" secondAttribute="leading" id="cUE-Os-nf9"/>
+                    <constraint firstAttribute="bottom" secondItem="58f-KG-bPL" secondAttribute="bottom" id="lXf-tM-tga"/>
+                    <constraint firstItem="58f-KG-bPL" firstAttribute="top" secondItem="9q2-rv-iMb" secondAttribute="bottom" id="lgB-Wd-TmJ"/>
+                    <constraint firstItem="bQp-oA-89p" firstAttribute="trailing" secondItem="58f-KG-bPL" secondAttribute="trailing" id="rxd-kV-fq0"/>
+                    <constraint firstItem="bQp-oA-89p" firstAttribute="trailing" secondItem="9q2-rv-iMb" secondAttribute="trailing" id="u07-aN-Lm4"/>
+                </constraints>
+            </view>
+            <toolbarItems/>
+            <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+            <connections>
+                <outlet property="mapView" destination="58f-KG-bPL" id="Ik5-WA-Koo"/>
+            </connections>
+            <point key="canvasLocation" x="167.17557251908397" y="-48.591549295774648"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="arrowshape.backward" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

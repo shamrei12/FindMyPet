@@ -3,7 +3,6 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="EhM-kM-J0E" customClass="AdvertViewController" customModule="FindMyPets" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="0tK-TI-hcV">
-                <rect key="frame" x="0.0" y="0.0" width="430" height="1200"/>
+                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InN-8h-2aY">
@@ -29,136 +28,132 @@
                         </items>
                     </navigationBar>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-OT-bWt">
-                        <rect key="frame" x="0.0" y="103" width="430" height="1097"/>
+                        <rect key="frame" x="0.0" y="103" width="430" height="829"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-Xj-xTd">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="1097"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="829"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ke4-UL-wDH">
-                                        <rect key="frame" x="10" y="50.333333333333343" width="410" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="rXJ-7L-5Ao"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6GQ-Qn-iAY">
-                                        <rect key="frame" x="10" y="9.9999999999999982" width="410" height="20.333333333333329"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="3gu-Q0-BiH">
+                                        <rect key="frame" x="10" y="10" width="410" height="819"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 8812" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmd-fL-px2">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22.12.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmx-ok-IH9">
-                                                <rect key="frame" x="325.33333333333331" y="0.0" width="84.666666666666686" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-XA-7vz">
-                                        <rect key="frame" x="10" y="300.33333333333331" width="410" height="79"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропала собака по кличке семен" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMg-Y4-RnW">
-                                                <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Собака красивая и добрая, черный окрас и приятный лай когда видит меня." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPH-nV-yoH">
-                                                <rect key="frame" x="0.0" y="38" width="410" height="41"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iXU-m4-5O0" userLabel="Information">
-                                        <rect key="frame" x="10" y="409.33333333333337" width="410" height="92"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип питомца: Собака" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-GG-hoi">
-                                                <rect key="frame" x="0.0" y="0.0" width="410" height="24"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возраст питомца: До 1 года" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOj-ef-LfS">
-                                                <rect key="frame" x="0.0" y="34" width="410" height="24"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес пропажи: г. Лида, ул. Мицкевича, д. 38" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB7-oX-4sQ">
-                                                <rect key="frame" x="0.0" y="68" width="410" height="24"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="3m5-18-ar4">
-                                        <rect key="frame" x="10" y="551.33333333333337" width="410" height="100"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="2OS-Kj-geN">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="Xdz-2z-tjQ"/>
-                                                    <constraint firstAttribute="height" constant="100" id="ZL7-WB-Owf"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="iG2-3B-7Dg">
-                                                <rect key="frame" x="140" y="11.333333333333258" width="74.333333333333314" height="77.666666666666671"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6GQ-Qn-iAY">
+                                                <rect key="frame" x="0.0" y="0.0" width="410" height="20.333333333333332"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алексей" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-Nk-r8D">
-                                                        <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="24"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="№ 8812" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmd-fL-px2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Онлайн" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dac-CB-4Wo">
-                                                        <rect key="frame" x="0.0" y="56.999999999999993" width="74.333333333333329" height="20.666666666666664"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22.12.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmx-ok-IH9">
+                                                        <rect key="frame" x="325.33333333333331" y="0.0" width="84.666666666666686" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tx-V1-mAc">
-                                                <rect key="frame" x="254.33333333333331" y="33" width="155.66666666666669" height="34.333333333333343"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ke4-UL-wDH">
+                                                <rect key="frame" x="0.0" y="65.333333333333357" width="410" height="193.66666666666663"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-XA-7vz">
+                                                <rect key="frame" x="0.0" y="304" width="410" height="86"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пропала собака по кличке семен" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMg-Y4-RnW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Собака красивая и добрая, черный окрас и приятный лай когда видит меня." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPH-nV-yoH">
+                                                        <rect key="frame" x="0.0" y="38" width="410" height="48"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iXU-m4-5O0" userLabel="Information">
+                                                <rect key="frame" x="0.0" y="435" width="410" height="92"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип питомца: Собака" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-GG-hoi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="410" height="24"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возраст питомца: До 1 года" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOj-ef-LfS">
+                                                        <rect key="frame" x="0.0" y="34" width="410" height="24"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес пропажи: г. Лида, ул. Мицкевича, д. 38" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB7-oX-4sQ">
+                                                        <rect key="frame" x="0.0" y="68" width="410" height="24"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="3m5-18-ar4">
+                                                <rect key="frame" x="0.0" y="572" width="410" height="132"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="2OS-Kj-geN">
+                                                        <rect key="frame" x="0.0" y="16" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Xdz-2z-tjQ"/>
+                                                            <constraint firstAttribute="height" constant="100" id="ZL7-WB-Owf"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="iG2-3B-7Dg">
+                                                        <rect key="frame" x="140" y="27.333333333333378" width="74.333333333333314" height="77.666666666666686"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алексей" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg7-Nk-r8D">
+                                                                <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="24"/>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Онлайн" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dac-CB-4Wo">
+                                                                <rect key="frame" x="0.0" y="56.999999999999993" width="74.333333333333329" height="20.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tx-V1-mAc">
+                                                        <rect key="frame" x="254.33333333333331" y="49" width="155.66666666666669" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Написать"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJU-25-zoF">
+                                                <rect key="frame" x="0.0" y="749" width="410" height="70"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="jvA-x1-Dp5"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Написать"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Показать на карте">
+                                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showMapTapped:" destination="EhM-kM-J0E" eventType="touchUpInside" id="Ahs-Ni-6gR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdN-Q6-BS2">
-                                        <rect key="frame" x="10" y="751.33333333333337" width="410" height="300.00000000000011"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="70N-uX-veO"/>
-                                        </constraints>
-                                        <standardMapConfiguration key="preferredConfiguration"/>
-                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="TdN-Q6-BS2" secondAttribute="trailing" constant="10" id="3Ot-qG-nQH"/>
-                                    <constraint firstAttribute="trailing" secondItem="6GQ-Qn-iAY" secondAttribute="trailing" constant="10" id="5Bs-sU-fT5"/>
-                                    <constraint firstItem="ke4-UL-wDH" firstAttribute="top" secondItem="6GQ-Qn-iAY" secondAttribute="bottom" constant="20" id="BBk-dj-8A9"/>
-                                    <constraint firstAttribute="trailing" secondItem="iXU-m4-5O0" secondAttribute="trailing" constant="10" id="GCO-lm-IUk"/>
-                                    <constraint firstItem="3m5-18-ar4" firstAttribute="top" secondItem="iXU-m4-5O0" secondAttribute="bottom" constant="50" id="Hdz-F8-aCS"/>
-                                    <constraint firstItem="iXU-m4-5O0" firstAttribute="top" secondItem="Mgj-XA-7vz" secondAttribute="bottom" constant="30" id="Lym-Oz-P6y"/>
-                                    <constraint firstItem="iXU-m4-5O0" firstAttribute="leading" secondItem="Xdt-Xj-xTd" secondAttribute="leading" constant="10" id="QGg-IM-V8m"/>
-                                    <constraint firstAttribute="trailing" secondItem="ke4-UL-wDH" secondAttribute="trailing" constant="10" id="RG0-vD-DEd"/>
-                                    <constraint firstItem="TdN-Q6-BS2" firstAttribute="leading" secondItem="Xdt-Xj-xTd" secondAttribute="leading" constant="10" id="RVU-Fs-lDQ"/>
-                                    <constraint firstItem="6GQ-Qn-iAY" firstAttribute="top" secondItem="Xdt-Xj-xTd" secondAttribute="top" constant="10" id="RyT-Ag-YOm"/>
-                                    <constraint firstItem="Mgj-XA-7vz" firstAttribute="leading" secondItem="Xdt-Xj-xTd" secondAttribute="leading" constant="10" id="SrW-TK-Wai"/>
-                                    <constraint firstAttribute="trailing" secondItem="Mgj-XA-7vz" secondAttribute="trailing" constant="10" id="VgZ-6e-UXj"/>
-                                    <constraint firstItem="Mgj-XA-7vz" firstAttribute="top" secondItem="ke4-UL-wDH" secondAttribute="bottom" constant="50" id="VtL-8J-bEW"/>
-                                    <constraint firstAttribute="trailing" secondItem="3m5-18-ar4" secondAttribute="trailing" constant="10" id="YHd-PU-GCG"/>
-                                    <constraint firstItem="ke4-UL-wDH" firstAttribute="leading" secondItem="Xdt-Xj-xTd" secondAttribute="leading" constant="10" id="dU9-lu-Pla"/>
-                                    <constraint firstItem="TdN-Q6-BS2" firstAttribute="top" secondItem="3m5-18-ar4" secondAttribute="bottom" constant="100" id="fMt-db-dM9"/>
-                                    <constraint firstItem="6GQ-Qn-iAY" firstAttribute="leading" secondItem="Xdt-Xj-xTd" secondAttribute="leading" constant="10" id="iEB-qz-7VL"/>
-                                    <constraint firstItem="3m5-18-ar4" firstAttribute="leading" secondItem="Xdt-Xj-xTd" secondAttribute="leading" constant="10" id="je3-1r-L7e"/>
+                                    <constraint firstAttribute="bottom" secondItem="3gu-Q0-BiH" secondAttribute="bottom" id="dry-4V-Mjf"/>
+                                    <constraint firstItem="3gu-Q0-BiH" firstAttribute="top" secondItem="Xdt-Xj-xTd" secondAttribute="top" constant="10" id="eaM-7Z-9At"/>
+                                    <constraint firstItem="3gu-Q0-BiH" firstAttribute="leading" secondItem="Xdt-Xj-xTd" secondAttribute="leading" constant="10" id="fWD-JT-GMJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3gu-Q0-BiH" secondAttribute="trailing" constant="10" id="rqy-ad-eZC"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -186,13 +181,12 @@
                     <constraint firstAttribute="bottom" secondItem="ewH-OT-bWt" secondAttribute="bottom" id="wWR-Yw-Hl5"/>
                 </constraints>
             </view>
-            <size key="freeformSize" width="430" height="1200"/>
+            <size key="freeformSize" width="430" height="932"/>
             <connections>
                 <outlet property="advertName" destination="SMg-Y4-RnW" id="hmQ-r2-J4e"/>
                 <outlet property="curentDate" destination="jmx-ok-IH9" id="65m-RM-NqB"/>
                 <outlet property="descriptoinName" destination="EPH-nV-yoH" id="rb5-WK-YCB"/>
                 <outlet property="lostAdress" destination="NB7-oX-4sQ" id="l8L-i3-KAr"/>
-                <outlet property="mapView" destination="TdN-Q6-BS2" id="B0d-6K-eSV"/>
                 <outlet property="numberAdvert" destination="wmd-fL-px2" id="Oge-rA-6AE"/>
                 <outlet property="oldPet" destination="vOj-ef-LfS" id="snt-Mg-q0C"/>
                 <outlet property="typePet" destination="QgW-GG-hoi" id="773-it-nDk"/>
@@ -203,6 +197,9 @@
     </objects>
     <resources>
         <image name="user" width="300" height="300"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
