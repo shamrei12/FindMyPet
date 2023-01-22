@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 import MapKit
-
+import OpenCageSDK
 class AdvertViewController: UIViewController {
     
     let locationManager = CLLocationManager()
@@ -28,21 +28,31 @@ class AdvertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         user = UserDefaultsModel()
-        annotations.coordinate = CLLocationCoordinate2D(latitude: 53.89944, longitude: 25.31188)
-        mapView.addAnnotation(annotations)
-
-        
-        let cameraCenterd = CLLocationCoordinate2D(latitude: 53.89944, longitude: 25.31188)
-        let region = MKCoordinateRegion(center: cameraCenterd, latitudinalMeters: 3, longitudinalMeters: 3)
-        mapView.setCameraBoundary(MKMapView.CameraBoundary(coordinateRegion: region), animated: true)
-        
-        
-        let zoomRage = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 1500)
-        mapView.setCameraZoomRange(zoomRage, animated: true)
-        mapView.isZoomEnabled = true
+        mapView.layer.borderColor = UIColor.black.cgColor
+        mapView.layer.borderWidth = 1
+        //        getCoodrd(adress: "Беларусь, Лида, ул. Мицкевича, 38 к1")
     }
     
-
+    func getCoodrd(adress: String) {
+        let ocSDK :OCSDK = OCSDK(apiKey: "6fdde9142f9648378e017befaec8f44c")
+        ocSDK.forwardGeocode(address: adress, withAnnotations: true) { [self] (response, success, error) in
+            let latitude = Double(truncating: response.locations.first?.latitude ?? 0)
+            let longitude = Double(truncating: response.locations.first?.longitude ?? 0)
+            print(latitude)
+            annotations.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            mapView.addAnnotation(annotations)
+            
+            let cameraCenterd = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let region = MKCoordinateRegion(center: cameraCenterd, latitudinalMeters: 3, longitudinalMeters: 3)
+            mapView.setCameraBoundary(MKMapView.CameraBoundary(coordinateRegion: region), animated: true)
+            //            self.mapView.setRegion(region, animated: false)
+            
+            let zoomRage = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 1300)
+            mapView.setCameraZoomRange(zoomRage, animated: false)
+            mapView.isZoomEnabled = true
+        }
+    }
+    
     
     func updateUI(_ index: Int) {
         let name = user?.load().first?.name ?? ""
@@ -59,9 +69,10 @@ class AdvertViewController: UIViewController {
         curentDate.text = objects[index].date
         username.text = name
         numberAdvert.text = "№ \(index + 1)"
+        getCoodrd(adress: objects[index].lostAdress ?? "")
     }
     
-
+    
     
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true)

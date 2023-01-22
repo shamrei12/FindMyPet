@@ -6,18 +6,19 @@
 //
 import UIKit
 import CoreData
+import OpenCageSDK
+import CoreLocation
 
 
 extension CreateAdvertViewController: UITextViewDelegate {
     
-
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = ""
             textView.textColor = UIColor.black
         }
     }
-
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = "Описание"
@@ -26,7 +27,7 @@ extension CreateAdvertViewController: UITextViewDelegate {
     }
 }
 
-class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
+class CreateAdvertViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak private var typePet: UIButton!
     @IBOutlet weak private var yoPet: UIButton!
@@ -37,6 +38,11 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lostAdress: UITextField!
     private var isMove: Bool = false
     private var data: Data?
+    var adress: String = ""
+    @IBOutlet weak var showLocation: UISwitch!
+    var locationManager: CLLocationManager?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,13 +57,15 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         lostAdress.addTarget(self, action: #selector(editingBegan(_:)), for: .editingDidBegin)
-        print(TimeManager.shared.currentDate())
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestAlwaysAuthorization()
     }
     
     @objc func editingBegan(_ textField: UITextField) {
         isMove = true
     }
-
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if isMove {
             if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -66,9 +74,9 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-
+        
     }
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         isMove = false
         if self.view.frame.origin.y != 0 {
@@ -87,13 +95,33 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
-
+    
+    
+    @IBAction func showGeolocation(_ sender: UISwitch) {
+        if sender.isOn {
+            self.lostAdress.isHidden = true
+            let ocSDK :OCSDK = OCSDK(apiKey: "6fdde9142f9648378e017befaec8f44c")
+            ocSDK.reverseGeocode(latitude: NSNumber(value: locationManager?.location?.coordinate.latitude ?? 0.0), longitude: NSNumber(value: locationManager?.location?.coordinate.longitude ?? 0.0), withAnnotations: true) { (response, success, error) in
+                if success {
+                    self.adress = response.locations.first?.formattedAddress ?? ""
+                } else {
+                    self.lostAdress.isHidden = false
+                }
+            }
+            
+        }
+    }
     
     @IBAction func createAdvert(_ sender: UIButton) {
         if valdidAdvert() {
             var advert: [LostPet] = []
-//            advert.append(LostPets(typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", postName: advertName.text ?? "", descriptionName: descriptionName.text ?? ""))
-            advert.append(LostPets(postName: advertName.text ?? "", descriptionName: descriptionName.text ?? "", typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", curentDate: TimeManager.shared.currentDate()))
+            //            advert.append(LostPets(typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", postName: advertName.text ?? "", descriptionName: descriptionName.text ?? ""))
+            if showLocation.isOn {
+                advert.append(LostPets(postName: advertName.text ?? "", descriptionName: descriptionName.text ?? "", typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: adress , curentDate: TimeManager.shared.currentDate()))
+            } else {
+                advert.append(LostPets(postName: advertName.text ?? "", descriptionName: descriptionName.text ?? "", typePet: typePet.titleLabel?.text ?? "", oldPet: yoPet.titleLabel?.text ?? "", lostAdress: lostAdress.text ?? "", curentDate: TimeManager.shared.currentDate()))
+            }
+            
             data?.save(data: advert)
             dismiss(animated: true)
         }
@@ -108,7 +136,6 @@ class CreateAdvertViewController: UIViewController, UITextFieldDelegate {
             UIAction(title: "Тип питомца", state: .on, handler: optionClousure),
             UIAction(title: "Собака", handler: optionClousure),
             UIAction(title: "Кот/Кошка", handler: optionClousure)
-            
         ])
         
         yoPet.menu = UIMenu(children: [
