@@ -21,12 +21,14 @@ class AdvertViewController: UIViewController {
     @IBOutlet weak private var numberAdvert: UILabel!
     private var user: UserDefaultsModel?
     var adress: String!
+    var geocoder: GeocoderModel?
     
     @IBOutlet weak var username: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user = UserDefaultsModel()
+        geocoder = GeocoderModel()
         //        getCoodrd(adress: "Беларусь, Лида, ул. Мицкевича, 38 к1")
     }
     
@@ -46,7 +48,8 @@ class AdvertViewController: UIViewController {
         descriptoinName.text = objects[index].descriptionName
         typePet.text = "Тип питомца: \(objects[index].typePet ?? "")"
         oldPet.text = "Возраст питомца: \(objects[index].oldPet ?? "")"
-        lostAdress.text = "Адрес пропажи: \(objects[index].lostAdress ?? "" )"
+        lostAdress.text = "Адрес пропажи: \(objects[index].lostAdress ?? "")"
+//        lostAdress.text = "Адрес пропажи: \(lostAdress(adress: objects[index].lostAdress ?? ""))"
         curentDate.text = objects[index].date
         username.text = name
         numberAdvert.text = "№ \(index + 1)"
@@ -64,6 +67,13 @@ class AdvertViewController: UIViewController {
     }
     
     
+//    func lostAdress (adress: String) -> String {
+//        var adressString: String = ""
+//        geocoder?.adressFormated(adress: adress) { responce in
+//            adressString = responce
+//        }
+//        return adressString
+//    }
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }

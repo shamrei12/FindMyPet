@@ -22,7 +22,6 @@ class MapViewController: UIViewController {
         ocSDK.forwardGeocode(address: adress, withAnnotations: true) { [self] (response, success, error) in
             let latitude = Double(truncating: response.locations.first?.latitude ?? 0)
             let longitude = Double(truncating: response.locations.first?.longitude ?? 0)
-            print(latitude)
             annotations.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             mapView.addAnnotation(annotations)
             

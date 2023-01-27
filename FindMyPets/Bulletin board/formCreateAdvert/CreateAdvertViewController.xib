@@ -84,15 +84,18 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-tT-IDZ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-tT-IDZ">
                                         <rect key="frame" x="10" y="484" width="373" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваша геопозиция" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adv-8T-Q6o">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qAC-vG-Mbp">
+                                                <rect key="frame" x="227" y="0.0" width="37" height="31"/>
+                                            </activityIndicatorView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nvu-ur-6JF">
                                                 <rect key="frame" x="324" y="0.0" width="51" height="31"/>
                                                 <connections>
@@ -216,6 +219,7 @@
                 <outlet property="houseNumber" destination="ETd-np-bnW" id="tWZ-ou-vzR"/>
                 <outlet property="rootView" destination="Pi9-QI-96c" id="t87-1L-5GC"/>
                 <outlet property="showLocation" destination="Nvu-ur-6JF" id="m9P-3L-3j5"/>
+                <outlet property="spinner" destination="qAC-vG-Mbp" id="e3U-7g-hE1"/>
                 <outlet property="streetName" destination="Lxt-Sx-1Wd" id="Jxh-wN-VeK"/>
                 <outlet property="typePet" destination="tn6-gj-5W8" id="fBa-jb-U4N"/>
                 <outlet property="yoPet" destination="Ruh-sC-cBy" id="fsJ-tj-6pv"/>

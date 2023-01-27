@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D8000BF6296DD0DF00A49E30 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8000BF4296DD0DF00A49E30 /* EditProfileViewController.swift */; };
 		D8000BF7296DD0DF00A49E30 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8000BF5296DD0DF00A49E30 /* EditProfileViewController.xib */; };
+		D820C676297EE306001B11B7 /* GeocoderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820C675297EE306001B11B7 /* GeocoderModel.swift */; };
+		D820C67829807C18001B11B7 /* GeoCoderModelQuickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D820C67729807C18001B11B7 /* GeoCoderModelQuickType.swift */; };
 		D82F9AF2295B56BA00439224 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F9AF0295B56BA00439224 /* ProfileViewController.swift */; };
 		D82F9AF3295B56BA00439224 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82F9AF1295B56BA00439224 /* ProfileViewController.xib */; };
 		D841E0EB295EF3EB00FF18F5 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841E0EA295EF3EB00FF18F5 /* ProfileModel.swift */; };
@@ -59,6 +61,8 @@
 		34BB86571E491D56540C5CB8 /* Pods_FindMyPets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyPets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8000BF4296DD0DF00A49E30 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		D8000BF5296DD0DF00A49E30 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		D820C675297EE306001B11B7 /* GeocoderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderModel.swift; sourceTree = "<group>"; };
+		D820C67729807C18001B11B7 /* GeoCoderModelQuickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoderModelQuickType.swift; sourceTree = "<group>"; };
 		D82F9AF0295B56BA00439224 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D82F9AF1295B56BA00439224 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		D841E0EA295EF3EB00FF18F5 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				D841E0EC295EF4F700FF18F5 /* UserDefaultsModel.swift */,
 				D841E0F02960266100FF18F5 /* CoreDataModel.swift */,
 				D8EFFA962965E0EB009C6210 /* MessagesModel.swift */,
+				D820C675297EE306001B11B7 /* GeocoderModel.swift */,
+				D820C67729807C18001B11B7 /* GeoCoderModelQuickType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				D8FFD927297D9D9400BE5770 /* CreateAdvertViewController.swift in Sources */,
 				D89C3348294F277200146974 /* AppDelegate.swift in Sources */,
 				D8FFD91B297C3F4B00BE5770 /* SessionManager.swift in Sources */,
+				D820C67829807C18001B11B7 /* GeoCoderModelQuickType.swift in Sources */,
 				D8441C9E296460D30083A993 /* ChatTableViewCell.swift in Sources */,
 				D841E0F12960266100FF18F5 /* CoreDataModel.swift in Sources */,
 				D89C334A294F277200146974 /* SceneDelegate.swift in Sources */,
@@ -493,6 +500,7 @@
 				D89C3366294F2D4300146974 /* BulletinCollectionViewCell.swift in Sources */,
 				D82F9AF2295B56BA00439224 /* ProfileViewController.swift in Sources */,
 				D8CC7AF229579B6200D24F03 /* AdvertData.xcdatamodeld in Sources */,
+				D820C676297EE306001B11B7 /* GeocoderModel.swift in Sources */,
 				D8EFFA972965E0EB009C6210 /* MessagesModel.swift in Sources */,
 				D89C336B2950EE0300146974 /* AdvertViewController.swift in Sources */,
 				D8441CB529649F550083A993 /* UserChatTableViewCell.swift in Sources */,

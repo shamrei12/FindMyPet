@@ -23,7 +23,6 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        hide()
-        print("viewDidLoad")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +32,6 @@ class MenuViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("viewDidDisappear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {

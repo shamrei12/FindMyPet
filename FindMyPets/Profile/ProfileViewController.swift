@@ -65,7 +65,6 @@ extension ProfileViewController: UIImagePickerControllerDelegate & UINavigationC
             info[UIImagePickerController.InfoKey.editedImage] as? UIImage ??
                        info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         )
-        print(type(of: image!))
         imageProfile.image = image
         dismiss(animated: true)
     }

@@ -26,12 +26,10 @@ class ContainerViewController: UIViewController, BulletinViewControllerDeleagete
         super.viewDidLoad()
         configureBulletinViewController()
         hideMenu()
-        print("viewDidLoad")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
         hideMenu()
         
     }
